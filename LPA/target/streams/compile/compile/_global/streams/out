@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/sfwu22/LPA/src/main/scala/lpa.scala:26:65: value toInt is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m        val num_iter = LPAConfig.getObj("num iterations").value.toInt[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

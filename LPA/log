@@ -1,0 +1,1073 @@
+22/12/13 00:01:08 WARN Utils: Your hostname, proj93 resolves to a loopback address: 127.0.1.1; using 192.168.50.93 instead (on interface eno1)
+22/12/13 00:01:08 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+22/12/13 00:01:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/12/13 00:01:09 INFO SparkContext: Running Spark version 3.3.0
+22/12/13 00:01:09 INFO ResourceUtils: ==============================================================
+22/12/13 00:01:09 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/12/13 00:01:09 INFO ResourceUtils: ==============================================================
+22/12/13 00:01:09 INFO SparkContext: Submitted application: LPA$
+22/12/13 00:01:09 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/12/13 00:01:09 INFO ResourceProfile: Limiting resource is cpu
+22/12/13 00:01:09 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/12/13 00:01:09 INFO SecurityManager: Changing view acls to: sfwu22
+22/12/13 00:01:09 INFO SecurityManager: Changing modify acls to: sfwu22
+22/12/13 00:01:09 INFO SecurityManager: Changing view acls groups to: 
+22/12/13 00:01:09 INFO SecurityManager: Changing modify acls groups to: 
+22/12/13 00:01:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sfwu22); groups with view permissions: Set(); users  with modify permissions: Set(sfwu22); groups with modify permissions: Set()
+22/12/13 00:01:09 INFO Utils: Successfully started service 'sparkDriver' on port 38555.
+22/12/13 00:01:09 INFO SparkEnv: Registering MapOutputTracker
+22/12/13 00:01:09 INFO SparkEnv: Registering BlockManagerMaster
+22/12/13 00:01:09 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/12/13 00:01:09 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/12/13 00:01:09 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/12/13 00:01:09 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-85087257-bedd-4823-8108-3fb63f482915
+22/12/13 00:01:09 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/12/13 00:01:09 INFO SparkEnv: Registering OutputCommitCoordinator
+22/12/13 00:01:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/12/13 00:01:09 INFO SparkContext: Added JAR file:/home/sfwu22/workspace/spark/spark-3.3.0-bin-hadoop3/lpa_project/target/scala-2.12/lpa-test_2.12-1.0.jar at spark://192.168.50.93:38555/jars/lpa-test_2.12-1.0.jar with timestamp 1670860869178
+22/12/13 00:01:09 INFO Executor: Starting executor ID driver on host 192.168.50.93
+22/12/13 00:01:09 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+22/12/13 00:01:09 INFO Executor: Fetching spark://192.168.50.93:38555/jars/lpa-test_2.12-1.0.jar with timestamp 1670860869178
+22/12/13 00:01:10 INFO TransportClientFactory: Successfully created connection to /192.168.50.93:38555 after 29 ms (0 ms spent in bootstraps)
+22/12/13 00:01:10 INFO Utils: Fetching spark://192.168.50.93:38555/jars/lpa-test_2.12-1.0.jar to /tmp/spark-bd6bb74d-bdba-4324-977a-706f7e2c9457/userFiles-dfb950aa-f8a0-48e2-a9ad-68ca1ca0b022/fetchFileTemp8051308502565792307.tmp
+22/12/13 00:01:10 INFO Executor: Adding file:/tmp/spark-bd6bb74d-bdba-4324-977a-706f7e2c9457/userFiles-dfb950aa-f8a0-48e2-a9ad-68ca1ca0b022/lpa-test_2.12-1.0.jar to class loader
+22/12/13 00:01:10 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37701.
+22/12/13 00:01:10 INFO NettyBlockTransferService: Server created on 192.168.50.93:37701
+22/12/13 00:01:10 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/12/13 00:01:10 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.50.93, 37701, None)
+22/12/13 00:01:10 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.50.93:37701 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.50.93, 37701, None)
+22/12/13 00:01:10 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.50.93, 37701, None)
+22/12/13 00:01:10 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.50.93, 37701, None)
+22/12/13 00:01:10 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.5 KiB, free 434.2 MiB)
+22/12/13 00:01:10 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.5 KiB, free 434.2 MiB)
+22/12/13 00:01:10 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.50.93:37701 (size: 32.5 KiB, free: 434.4 MiB)
+22/12/13 00:01:10 INFO SparkContext: Created broadcast 0 from textFile at GraphLoader.scala:75
+22/12/13 00:01:10 INFO FileInputFormat: Total input files to process : 1
+22/12/13 00:01:10 INFO SparkContext: Starting job: count at GraphLoader.scala:96
+22/12/13 00:01:10 INFO DAGScheduler: Got job 0 (count at GraphLoader.scala:96) with 2 output partitions
+22/12/13 00:01:10 INFO DAGScheduler: Final stage: ResultStage 0 (count at GraphLoader.scala:96)
+22/12/13 00:01:10 INFO DAGScheduler: Parents of final stage: List()
+22/12/13 00:01:10 INFO DAGScheduler: Missing parents: List()
+22/12/13 00:01:10 INFO DAGScheduler: Submitting ResultStage 0 (GraphLoader.edgeListFile - edges (/home/sfwu22/workspace/spark/spark-3.3.0-bin-hadoop3/lpa_project/data/karate/karate.txt) MapPartitionsRDD[2] at mapPartitionsWithIndex at GraphLoader.scala:77), which has no missing parents
+22/12/13 00:01:10 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 5.5 KiB, free 434.1 MiB)
+22/12/13 00:01:10 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.1 KiB, free 434.1 MiB)
+22/12/13 00:01:10 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.4 MiB)
+22/12/13 00:01:10 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:10 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (GraphLoader.edgeListFile - edges (/home/sfwu22/workspace/spark/spark-3.3.0-bin-hadoop3/lpa_project/data/karate/karate.txt) MapPartitionsRDD[2] at mapPartitionsWithIndex at GraphLoader.scala:77) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:10 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+22/12/13 00:01:10 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4561 bytes) taskResourceAssignments Map()
+22/12/13 00:01:10 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4561 bytes) taskResourceAssignments Map()
+22/12/13 00:01:10 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+22/12/13 00:01:10 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/12/13 00:01:11 INFO HadoopRDD: Input split: file:/home/sfwu22/workspace/spark/spark-3.3.0-bin-hadoop3/lpa_project/data/karate/karate.txt:266+267
+22/12/13 00:01:11 INFO HadoopRDD: Input split: file:/home/sfwu22/workspace/spark/spark-3.3.0-bin-hadoop3/lpa_project/data/karate/karate.txt:0+266
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_2_1 stored as values in memory (estimated size 2.8 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_2_0 stored as values in memory (estimated size 3.0 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_2_0 in memory on 192.168.50.93:37701 (size: 3.0 KiB, free: 434.4 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_2_1 in memory on 192.168.50.93:37701 (size: 2.8 KiB, free: 434.4 MiB)
+22/12/13 00:01:11 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1012 bytes result sent to driver
+22/12/13 00:01:11 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1012 bytes result sent to driver
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 220 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 237 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+22/12/13 00:01:11 INFO DAGScheduler: ResultStage 0 (count at GraphLoader.scala:96) finished in 0.337 s
+22/12/13 00:01:11 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+22/12/13 00:01:11 INFO DAGScheduler: Job 0 finished: count at GraphLoader.scala:96, took 0.377966 s
+22/12/13 00:01:11 INFO GraphLoader: It took 859 ms to load the edges
+22/12/13 00:01:11 INFO SparkContext: Starting job: isEmpty at Pregel.scala:140
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 5 (mapPartitions at VertexRDD.scala:356) as input to shuffle 3
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 23 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 1
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 19 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 0
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 27 (mapPartitions at GraphImpl.scala:207) as input to shuffle 2
+22/12/13 00:01:11 INFO DAGScheduler: Got job 1 (isEmpty at Pregel.scala:140) with 1 output partitions
+22/12/13 00:01:11 INFO DAGScheduler: Final stage: ResultStage 5 (isEmpty at Pregel.scala:140)
+22/12/13 00:01:11 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1, ShuffleMapStage 4)
+22/12/13 00:01:11 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1, ShuffleMapStage 4)
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ShuffleMapStage 1 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[5] at mapPartitions at VertexRDD.scala:356), which has no missing parents
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.1 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.9 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.50.93:37701 (size: 3.9 KiB, free: 434.4 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[5] at mapPartitions at VertexRDD.scala:356) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4550 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4550 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_2_1 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_2_0 locally
+22/12/13 00:01:11 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 1171 bytes result sent to driver
+22/12/13 00:01:11 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 1171 bytes result sent to driver
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 312 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 310 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+22/12/13 00:01:11 INFO DAGScheduler: ShuffleMapStage 1 (mapPartitions at VertexRDD.scala:356) finished in 0.343 s
+22/12/13 00:01:11 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:11 INFO DAGScheduler: running: Set()
+22/12/13 00:01:11 INFO DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 2, ShuffleMapStage 3, ShuffleMapStage 4)
+22/12/13 00:01:11 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ShuffleMapStage 2 (ReplicatedVertexView.upgrade(true, true) - shippedVerts true true (broadcast) MapPartitionsRDD[23] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 8.6 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.3 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.50.93:37701 (size: 4.3 KiB, free: 434.4 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (ReplicatedVertexView.upgrade(true, true) - shippedVerts true true (broadcast) MapPartitionsRDD[23] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks resource profile 0
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ShuffleMapStage 3 (ReplicatedVertexView.updateVertices - shippedVerts false false (broadcast) MapPartitionsRDD[19] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4) (192.168.50.93, executor driver, partition 0, NODE_LOCAL, 4260 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5) (192.168.50.93, executor driver, partition 1, NODE_LOCAL, 4260 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 9.2 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.5 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.50.93:37701 (size: 4.5 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 3 (ReplicatedVertexView.updateVertices - shippedVerts false false (broadcast) MapPartitionsRDD[19] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks resource profile 0
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6) (192.168.50.93, executor driver, partition 0, NODE_LOCAL, 4523 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7) (192.168.50.93, executor driver, partition 1, NODE_LOCAL, 4523 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (223.0 B) non-empty blocks including 2 (223.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (212.0 B) non-empty blocks including 2 (212.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_11_1 stored as values in memory (estimated size 1744.0 B, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_11_0 stored as values in memory (estimated size 1760.0 B, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_11_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.3 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_11_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.3 MiB)
+22/12/13 00:01:11 WARN BlockManager: Block rdd_11_1 already exists on this machine; not re-adding it
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_11_0 locally
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_15_1 stored as values in memory (estimated size 1744.0 B, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_15_0 stored as values in memory (estimated size 1760.0 B, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_15_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.3 MiB)
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_1 locally
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_15_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.3 MiB)
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_0 locally
+22/12/13 00:01:11 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 1128 bytes result sent to driver
+22/12/13 00:01:11 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 1128 bytes result sent to driver
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 147 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 147 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+22/12/13 00:01:11 INFO DAGScheduler: ShuffleMapStage 2 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.162 s
+22/12/13 00:01:11 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:11 INFO DAGScheduler: running: Set(ShuffleMapStage 3)
+22/12/13 00:01:11 INFO DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 4)
+22/12/13 00:01:11 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:11 INFO Executor: 2 block locks were not released by task 1.0 in stage 3.0 (TID 7)
+[rdd_15_1, rdd_11_1]
+22/12/13 00:01:11 INFO Executor: 2 block locks were not released by task 0.0 in stage 3.0 (TID 6)
+[rdd_11_0, rdd_15_0]
+22/12/13 00:01:11 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 1429 bytes result sent to driver
+22/12/13 00:01:11 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 1429 bytes result sent to driver
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 138 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 144 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+22/12/13 00:01:11 INFO DAGScheduler: ShuffleMapStage 3 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.155 s
+22/12/13 00:01:11 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:11 INFO DAGScheduler: running: Set()
+22/12/13 00:01:11 INFO DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 4)
+22/12/13 00:01:11 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ShuffleMapStage 4 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[27] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 10.1 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.50.93:37701 (size: 5.0 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[27] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks resource profile 0
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 8) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4929 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 9) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4929 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 1.0 in stage 4.0 (TID 9)
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 4.0 (TID 8)
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_2_0 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_2_1 locally
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_13_1 stored as values in memory (estimated size 2.9 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_13_0 stored as values in memory (estimated size 3.1 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_13_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_13_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (552.0 B) non-empty blocks including 2 (552.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (502.0 B) non-empty blocks including 2 (502.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_21_1 stored as values in memory (estimated size 2.9 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_21_0 stored as values in memory (estimated size 3.1 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_21_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_21_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (638.0 B) non-empty blocks including 2 (638.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (702.0 B) non-empty blocks including 2 (702.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:11 INFO Executor: 1 block locks were not released by task 1.0 in stage 4.0 (TID 9)
+[rdd_2_1]
+22/12/13 00:01:11 INFO Executor: 1 block locks were not released by task 0.0 in stage 4.0 (TID 8)
+[rdd_2_0]
+22/12/13 00:01:11 INFO Executor: Finished task 1.0 in stage 4.0 (TID 9). 1429 bytes result sent to driver
+22/12/13 00:01:11 INFO Executor: Finished task 0.0 in stage 4.0 (TID 8). 1429 bytes result sent to driver
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 9) in 48 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 8) in 49 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+22/12/13 00:01:11 INFO DAGScheduler: ShuffleMapStage 4 (mapPartitions at GraphImpl.scala:207) finished in 0.058 s
+22/12/13 00:01:11 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:11 INFO DAGScheduler: running: Set()
+22/12/13 00:01:11 INFO DAGScheduler: waiting: Set(ResultStage 5)
+22/12/13 00:01:11 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ResultStage 5 (VertexRDDImpl[30] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 9.7 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.7 KiB, free 434.1 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.50.93:37701 (size: 4.7 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (VertexRDDImpl[30] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 10) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4543 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 5.0 (TID 10)
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_0 locally
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (1191.0 B) non-empty blocks including 2 (1191.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:11 INFO MemoryStore: Block rdd_29_0 stored as values in memory (estimated size 6.2 KiB, free 434.0 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added rdd_29_0 in memory on 192.168.50.93:37701 (size: 6.2 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO Executor: 1 block locks were not released by task 0.0 in stage 5.0 (TID 10)
+[rdd_29_0]
+22/12/13 00:01:11 INFO Executor: Finished task 0.0 in stage 5.0 (TID 10). 1771 bytes result sent to driver
+22/12/13 00:01:11 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 10) in 15 ms on 192.168.50.93 (executor driver) (1/1)
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+22/12/13 00:01:11 INFO DAGScheduler: ResultStage 5 (isEmpty at Pregel.scala:140) finished in 0.023 s
+22/12/13 00:01:11 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+22/12/13 00:01:11 INFO DAGScheduler: Job 1 finished: isEmpty at Pregel.scala:140, took 0.624245 s
+22/12/13 00:01:11 INFO SparkContext: Starting job: isEmpty at Pregel.scala:161
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 35 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 4
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 39 (mapPartitions at VertexRDDImpl.scala:251) as input to shuffle 5
+22/12/13 00:01:11 INFO DAGScheduler: Registering RDD 43 (mapPartitions at GraphImpl.scala:207) as input to shuffle 6
+22/12/13 00:01:11 INFO DAGScheduler: Got job 2 (isEmpty at Pregel.scala:161) with 1 output partitions
+22/12/13 00:01:11 INFO DAGScheduler: Final stage: ResultStage 13 (isEmpty at Pregel.scala:161)
+22/12/13 00:01:11 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 6)
+22/12/13 00:01:11 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 12)
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ShuffleMapStage 10 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[35] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 10.6 KiB, free 434.0 MiB)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 434.0 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 192.168.50.93:37701 (size: 5.0 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[35] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 10.0 with 2 tasks resource profile 0
+22/12/13 00:01:11 INFO DAGScheduler: Submitting ShuffleMapStage 11 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[39] at mapPartitions at VertexRDDImpl.scala:251), which has no missing parents
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 11) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4596 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 12) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4596 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 10.0 (TID 11)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 9.5 KiB, free 434.0 MiB)
+22/12/13 00:01:11 INFO Executor: Running task 1.0 in stage 10.0 (TID 12)
+22/12/13 00:01:11 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.7 KiB, free 434.0 MiB)
+22/12/13 00:01:11 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 192.168.50.93:37701 (size: 4.7 KiB, free: 434.3 MiB)
+22/12/13 00:01:11 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[39] at mapPartitions at VertexRDDImpl.scala:251) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:11 INFO TaskSchedulerImpl: Adding task set 11.0 with 2 tasks resource profile 0
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 13) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4532 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 14) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4532 bytes) taskResourceAssignments Map()
+22/12/13 00:01:11 INFO Executor: Running task 0.0 in stage 11.0 (TID 13)
+22/12/13 00:01:11 INFO Executor: Running task 1.0 in stage 11.0 (TID 14)
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_29_0 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_1 locally
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Getting 2 (1132.0 B) non-empty blocks including 2 (1132.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_0 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_1 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_0 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_29_0 locally
+22/12/13 00:01:11 INFO BlockManager: Found block rdd_15_1 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_31_0 stored as values in memory (estimated size 1760.0 B, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_31_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.3 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_29_1 stored as values in memory (estimated size 6.0 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_29_1 in memory on 192.168.50.93:37701 (size: 6.0 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_29_1 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_31_1 stored as values in memory (estimated size 1744.0 B, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_31_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.3 MiB)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 0.0 in stage 10.0 (TID 11)
+[rdd_31_0, rdd_29_0, rdd_15_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 10.0 (TID 11). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 11) in 26 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 1.0 in stage 10.0 (TID 12)
+[rdd_29_1, rdd_15_1, rdd_31_1]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 11.0 (TID 13). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 10.0 (TID 12). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 13) in 21 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 12) in 28 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 10 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.037 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set(ShuffleMapStage 11)
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 11.0 (TID 14). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 14) in 25 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 11 (mapPartitions at VertexRDDImpl.scala:251) finished in 0.032 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 12 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[43] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 11.5 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 5.7 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 192.168.50.93:37701 (size: 5.7 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[43] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 12.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 15) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 5011 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 16) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 5011 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 12.0 (TID 15)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 12.0 (TID 16)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_21_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_21_1 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (702.0 B) non-empty blocks including 2 (702.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (638.0 B) non-empty blocks including 2 (638.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (773.0 B) non-empty blocks including 2 (773.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (668.0 B) non-empty blocks including 2 (668.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_37_0 stored as values in memory (estimated size 3.1 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_37_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_37_1 stored as values in memory (estimated size 2.9 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_37_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (126.0 B) non-empty blocks including 2 (126.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 12.0 (TID 16). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 12.0 (TID 15). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 16) in 28 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 15) in 29 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 12 (mapPartitions at GraphImpl.scala:207) finished in 0.036 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 13)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 13 (VertexRDDImpl[46] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 10.8 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 192.168.50.93:37701 (size: 5.0 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (VertexRDDImpl[46] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 17) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4616 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 13.0 (TID 17)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_31_0 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (1029.0 B) non-empty blocks including 2 (1029.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_45_0 stored as values in memory (estimated size 4.9 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_45_0 in memory on 192.168.50.93:37701 (size: 4.9 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 13.0 (TID 17)
+[rdd_45_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 13.0 (TID 17). 1580 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 17) in 9 ms on 192.168.50.93 (executor driver) (1/1)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 13 (isEmpty at Pregel.scala:161) finished in 0.015 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 13: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 2 finished: isEmpty at Pregel.scala:161, took 0.104077 s
+22/12/13 00:01:12 INFO Pregel: Pregel finished iteration 0
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 29 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 29
+22/12/13 00:01:12 INFO MapPartitionsRDD: Removing RDD 15 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 21 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 15
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 21
+22/12/13 00:01:12 INFO SparkContext: Starting job: isEmpty at Pregel.scala:161
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 55 (mapPartitions at VertexRDDImpl.scala:251) as input to shuffle 8
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 51 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 7
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 59 (mapPartitions at GraphImpl.scala:207) as input to shuffle 9
+22/12/13 00:01:12 INFO DAGScheduler: Got job 3 (isEmpty at Pregel.scala:161) with 1 output partitions
+22/12/13 00:01:12 INFO DAGScheduler: Final stage: ResultStage 24 (isEmpty at Pregel.scala:161)
+22/12/13 00:01:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 20, ShuffleMapStage 17, ShuffleMapStage 14, ShuffleMapStage 23)
+22/12/13 00:01:12 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 23)
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 21 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[55] at mapPartitions at VertexRDDImpl.scala:251), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 10.5 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on 192.168.50.93:37701 (size: 5.0 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 21 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[55] at mapPartitions at VertexRDDImpl.scala:251) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 21.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 22 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[51] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 18) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4605 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 21.0 (TID 19) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4605 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 21.0 (TID 18)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 21.0 (TID 19)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 11.2 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.2 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on 192.168.50.93:37701 (size: 5.2 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_45_0 locally
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 22 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[51] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 22.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_31_1 locally
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 22.0 (TID 20) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4669 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 22.0 (TID 21) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4669 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (1029.0 B) non-empty blocks including 2 (1029.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 22.0 (TID 21)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 22.0 (TID 20)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_45_1 stored as values in memory (estimated size 5.1 KiB, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_45_1 in memory on 192.168.50.93:37701 (size: 5.1 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_31_0 locally
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 21.0 (TID 18). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_31_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_31_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_45_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_31_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_45_1 locally
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 18) in 16 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_47_0 stored as values in memory (estimated size 1760.0 B, free 434.0 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_47_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.3 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_47_1 stored as values in memory (estimated size 1744.0 B, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_47_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.3 MiB)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 0.0 in stage 22.0 (TID 20)
+[rdd_45_0, rdd_47_0, rdd_31_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 22.0 (TID 20). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 1.0 in stage 22.0 (TID 21)
+[rdd_45_1, rdd_47_1, rdd_31_1]
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 22.0 (TID 20) in 13 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 22.0 (TID 21). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 22.0 (TID 21) in 13 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 22.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 22 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.022 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set(ShuffleMapStage 21)
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 24, ShuffleMapStage 23)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 21.0 (TID 19). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 21.0 (TID 19) in 26 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 21 (mapPartitions at VertexRDDImpl.scala:251) finished in 0.033 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 24, ShuffleMapStage 23)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 23 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[59] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 11.7 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 5.7 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on 192.168.50.93:37701 (size: 5.7 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 23 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[59] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 23.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 23.0 (TID 22) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 5052 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 23.0 (TID 23) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 5052 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 23.0 (TID 23)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 23.0 (TID 22)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_37_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_37_1 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (736.0 B) non-empty blocks including 2 (736.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (668.0 B) non-empty blocks including 2 (668.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_53_0 stored as values in memory (estimated size 3.1 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_53_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_53_1 stored as values in memory (estimated size 2.9 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_53_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (126.0 B) non-empty blocks including 2 (126.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 23.0 (TID 22). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 23.0 (TID 22) in 22 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 23.0 (TID 23). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 23.0 (TID 23) in 23 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 23.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 23 (mapPartitions at GraphImpl.scala:207) finished in 0.032 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 24)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 24 (VertexRDDImpl[62] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 11.4 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 5.2 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on 192.168.50.93:37701 (size: 5.2 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 24 (VertexRDDImpl[62] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 24.0 with 1 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 24.0 (TID 24) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4689 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 24.0 (TID 24)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_47_0 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (935.0 B) non-empty blocks including 2 (935.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_61_0 stored as values in memory (estimated size 4.5 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_61_0 in memory on 192.168.50.93:37701 (size: 4.5 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 24.0 (TID 24)
+[rdd_61_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 24.0 (TID 24). 1542 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 24.0 (TID 24) in 11 ms on 192.168.50.93 (executor driver) (1/1)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 24.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 24 (isEmpty at Pregel.scala:161) finished in 0.016 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 24: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 3 finished: isEmpty at Pregel.scala:161, took 0.093313 s
+22/12/13 00:01:12 INFO Pregel: Pregel finished iteration 1
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 45 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 31 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 45
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 31
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 37 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 37
+22/12/13 00:01:12 INFO MapPartitionsRDD: Removing RDD 15 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 15
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 25 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 25
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 29 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 29
+22/12/13 00:01:12 INFO SparkContext: Starting job: isEmpty at Pregel.scala:161
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 71 (mapPartitions at VertexRDDImpl.scala:251) as input to shuffle 11
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 67 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 10
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 75 (mapPartitions at GraphImpl.scala:207) as input to shuffle 12
+22/12/13 00:01:12 INFO DAGScheduler: Got job 4 (isEmpty at Pregel.scala:161) with 1 output partitions
+22/12/13 00:01:12 INFO DAGScheduler: Final stage: ResultStage 38 (isEmpty at Pregel.scala:161)
+22/12/13 00:01:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 37, ShuffleMapStage 34, ShuffleMapStage 31, ShuffleMapStage 28, ShuffleMapStage 25)
+22/12/13 00:01:12 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 37)
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 35 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[71] at mapPartitions at VertexRDDImpl.scala:251), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 11.1 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 5.1 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 192.168.50.93:37701 (size: 5.1 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 35 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[71] at mapPartitions at VertexRDDImpl.scala:251) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 35.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 36 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[67] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 35.0 (TID 25) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4678 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 35.0 (TID 26) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4678 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 35.0 (TID 25)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 35.0 (TID 26)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 11.8 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 5.3 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on 192.168.50.93:37701 (size: 5.3 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 36 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[67] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 36.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 36.0 (TID 27) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4742 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 36.0 (TID 28) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4742 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_61_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_47_1 locally
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 36.0 (TID 28)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 36.0 (TID 27)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (1029.0 B) non-empty blocks including 2 (1029.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_61_1 stored as values in memory (estimated size 4.4 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_61_1 in memory on 192.168.50.93:37701 (size: 4.4 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_47_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_47_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_47_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_61_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_47_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_61_0 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_63_1 stored as values in memory (estimated size 1744.0 B, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_63_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.3 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_63_0 stored as values in memory (estimated size 1760.0 B, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_63_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.3 MiB)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 1.0 in stage 36.0 (TID 28)
+[rdd_61_1, rdd_63_1, rdd_47_1]
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 0.0 in stage 36.0 (TID 27)
+[rdd_47_0, rdd_61_0, rdd_63_0]
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 36.0 (TID 28). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 36.0 (TID 27). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 35.0 (TID 25). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 36.0 (TID 28) in 11 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 36.0 (TID 27) in 13 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 36.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 36 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.018 s
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 35.0 (TID 25) in 19 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set(ShuffleMapStage 35)
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 37, ResultStage 38)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 35.0 (TID 26). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 35.0 (TID 26) in 20 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 35.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 35 (mapPartitions at VertexRDDImpl.scala:251) finished in 0.027 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 37, ResultStage 38)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 37 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[75] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 12.0 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on 192.168.50.93:37701 (size: 5.8 KiB, free: 434.3 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 37 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[75] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 37.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 37.0 (TID 29) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 5093 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 37.0 (TID 30) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 5093 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 37.0 (TID 30)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 37.0 (TID 29)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_53_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_53_1 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (736.0 B) non-empty blocks including 2 (736.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (668.0 B) non-empty blocks including 2 (668.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_69_0 stored as values in memory (estimated size 3.1 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_69_1 stored as values in memory (estimated size 2.9 KiB, free 433.9 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_69_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_69_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (126.0 B) non-empty blocks including 2 (126.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 37.0 (TID 29). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 37.0 (TID 29) in 21 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 37.0 (TID 30). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 37.0 (TID 30) in 21 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 37.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 37 (mapPartitions at GraphImpl.scala:207) finished in 0.027 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 38)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 38 (VertexRDDImpl[78] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 12.0 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 5.3 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on 192.168.50.93:37701 (size: 5.3 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 38 (VertexRDDImpl[78] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 38.0 with 1 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 38.0 (TID 31) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4762 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 38.0 (TID 31)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_63_0 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (984.0 B) non-empty blocks including 2 (984.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_77_0 stored as values in memory (estimated size 4.4 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_77_0 in memory on 192.168.50.93:37701 (size: 4.4 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 38.0 (TID 31)
+[rdd_77_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 38.0 (TID 31). 1514 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 38.0 (TID 31) in 13 ms on 192.168.50.93 (executor driver) (1/1)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 38.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 38 (isEmpty at Pregel.scala:161) finished in 0.017 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 38: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 4 finished: isEmpty at Pregel.scala:161, took 0.082702 s
+22/12/13 00:01:12 INFO Pregel: Pregel finished iteration 2
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 61 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 47 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 61
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 53 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 47
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 53
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 31 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 37 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 31
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 37
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 45 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 45
+22/12/13 00:01:12 INFO SparkContext: Starting job: isEmpty at Pregel.scala:161
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 87 (mapPartitions at VertexRDDImpl.scala:251) as input to shuffle 14
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 83 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 13
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 91 (mapPartitions at GraphImpl.scala:207) as input to shuffle 15
+22/12/13 00:01:12 INFO DAGScheduler: Got job 5 (isEmpty at Pregel.scala:161) with 1 output partitions
+22/12/13 00:01:12 INFO DAGScheduler: Final stage: ResultStage 55 (isEmpty at Pregel.scala:161)
+22/12/13 00:01:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 51, ShuffleMapStage 48, ShuffleMapStage 45, ShuffleMapStage 42, ShuffleMapStage 39, ShuffleMapStage 54)
+22/12/13 00:01:12 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 54)
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 52 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[87] at mapPartitions at VertexRDDImpl.scala:251), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 11.8 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 5.2 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on 192.168.50.93:37701 (size: 5.2 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 52 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[87] at mapPartitions at VertexRDDImpl.scala:251) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 52.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 53 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[83] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 52.0 (TID 32) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4751 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 52.0 (TID 33) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4751 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 12.5 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 52.0 (TID 33)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 52.0 (TID 32)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on 192.168.50.93:37701 (size: 5.4 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 53 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[83] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 53.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 53.0 (TID 34) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4815 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 53.0 (TID 35) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4815 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 53.0 (TID 35)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 53.0 (TID 34)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_63_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_77_0 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (1029.0 B) non-empty blocks including 2 (1029.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_63_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_63_1 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_77_1 stored as values in memory (estimated size 4.4 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_77_1 in memory on 192.168.50.93:37701 (size: 4.4 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_77_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_63_0 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_79_1 stored as values in memory (estimated size 1744.0 B, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_79_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.2 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_63_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_77_0 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_79_0 stored as values in memory (estimated size 1760.0 B, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_79_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.2 MiB)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 1.0 in stage 53.0 (TID 35)
+[rdd_63_1, rdd_77_1, rdd_79_1]
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 53.0 (TID 35). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 53.0 (TID 35) in 11 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 0.0 in stage 53.0 (TID 34)
+[rdd_77_0, rdd_79_0, rdd_63_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 53.0 (TID 34). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 53.0 (TID 34) in 13 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 53.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 53 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.024 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set(ShuffleMapStage 52)
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 52.0 (TID 32). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 54, ResultStage 55)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 52.0 (TID 32) in 26 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 52.0 (TID 33). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 52.0 (TID 33) in 26 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 52.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 52 (mapPartitions at VertexRDDImpl.scala:251) finished in 0.033 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 54, ResultStage 55)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 54 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[91] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 12.3 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on 192.168.50.93:37701 (size: 5.9 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 54 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[91] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 54.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 54.0 (TID 36) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 5134 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 54.0 (TID 37) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 5134 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 54.0 (TID 36)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 54.0 (TID 37)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_69_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_69_1 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (702.0 B) non-empty blocks including 2 (702.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (668.0 B) non-empty blocks including 2 (668.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_85_0 stored as values in memory (estimated size 3.1 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_85_1 stored as values in memory (estimated size 2.9 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_85_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_85_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (126.0 B) non-empty blocks including 2 (126.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 54.0 (TID 37). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 54.0 (TID 36). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 54.0 (TID 37) in 19 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 54.0 (TID 36) in 20 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 54.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 54 (mapPartitions at GraphImpl.scala:207) finished in 0.025 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 55)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 55 (VertexRDDImpl[94] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 12.7 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on 192.168.50.93:37701 (size: 5.4 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 55 (VertexRDDImpl[94] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 55.0 with 1 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 55.0 (TID 38) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4835 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 55.0 (TID 38)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_79_0 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (935.0 B) non-empty blocks including 2 (935.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_93_0 stored as values in memory (estimated size 4.3 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_93_0 in memory on 192.168.50.93:37701 (size: 4.3 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 55.0 (TID 38)
+[rdd_93_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 55.0 (TID 38). 1514 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 55.0 (TID 38) in 11 ms on 192.168.50.93 (executor driver) (1/1)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 55.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 55 (isEmpty at Pregel.scala:161) finished in 0.015 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 55: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 5 finished: isEmpty at Pregel.scala:161, took 0.082685 s
+22/12/13 00:01:12 INFO Pregel: Pregel finished iteration 3
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 77 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 77
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 63 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 69 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 63
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 69
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 47 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 53 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 47
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 53
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 61 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 61
+22/12/13 00:01:12 INFO SparkContext: Starting job: isEmpty at Pregel.scala:161
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 103 (mapPartitions at VertexRDDImpl.scala:251) as input to shuffle 17
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 99 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 16
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 107 (mapPartitions at GraphImpl.scala:207) as input to shuffle 18
+22/12/13 00:01:12 INFO DAGScheduler: Got job 6 (isEmpty at Pregel.scala:161) with 1 output partitions
+22/12/13 00:01:12 INFO DAGScheduler: Final stage: ResultStage 75 (isEmpty at Pregel.scala:161)
+22/12/13 00:01:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 74, ShuffleMapStage 56, ShuffleMapStage 68, ShuffleMapStage 71, ShuffleMapStage 65, ShuffleMapStage 62, ShuffleMapStage 59)
+22/12/13 00:01:12 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 74)
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 72 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[103] at mapPartitions at VertexRDDImpl.scala:251), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 12.4 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on 192.168.50.93:37701 (size: 5.4 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 72 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[103] at mapPartitions at VertexRDDImpl.scala:251) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 72.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 73 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[99] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 72.0 (TID 39) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4824 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 72.0 (TID 40) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4824 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 13.1 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 72.0 (TID 40)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 72.0 (TID 39)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 5.6 KiB, free 433.8 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on 192.168.50.93:37701 (size: 5.6 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 73 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[99] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 73.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 73.0 (TID 41) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4888 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 73.0 (TID 42) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4888 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 73.0 (TID 42)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 73.0 (TID 41)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_93_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_79_1 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (980.0 B) non-empty blocks including 2 (980.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_79_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_79_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_79_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_79_0 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_93_1 stored as values in memory (estimated size 4.3 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_93_0 locally
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_93_1 in memory on 192.168.50.93:37701 (size: 4.3 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_93_1 locally
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_95_0 stored as values in memory (estimated size 1760.0 B, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_95_0 in memory on 192.168.50.93:37701 (size: 1760.0 B, free: 434.2 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_95_1 stored as values in memory (estimated size 1744.0 B, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_95_1 in memory on 192.168.50.93:37701 (size: 1744.0 B, free: 434.2 MiB)
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 1.0 in stage 73.0 (TID 42)
+[rdd_79_1, rdd_95_1, rdd_93_1]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 72.0 (TID 39). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 73.0 (TID 42). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: 3 block locks were not released by task 0.0 in stage 73.0 (TID 41)
+[rdd_95_0, rdd_79_0, rdd_93_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 73.0 (TID 41). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 72.0 (TID 39) in 18 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 73.0 (TID 42) in 14 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 73.0 (TID 41) in 15 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 73.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 73 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.019 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set(ShuffleMapStage 72)
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 74, ResultStage 75)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 72.0 (TID 40). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 72.0 (TID 40) in 22 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 72.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 72 (mapPartitions at VertexRDDImpl.scala:251) finished in 0.028 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ShuffleMapStage 74, ResultStage 75)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 74 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[107] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 12.6 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on 192.168.50.93:37701 (size: 6.0 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 74 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[107] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 74.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 74.0 (TID 43) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 5175 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 74.0 (TID 44) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 5175 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 74.0 (TID 43)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 74.0 (TID 44)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_85_0 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_85_1 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (668.0 B) non-empty blocks including 2 (668.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (608.0 B) non-empty blocks including 2 (608.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_101_0 stored as values in memory (estimated size 3.1 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_101_1 stored as values in memory (estimated size 2.9 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_101_0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_101_1 in memory on 192.168.50.93:37701 (size: 2.9 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (126.0 B) non-empty blocks including 2 (126.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 74.0 (TID 43). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 74.0 (TID 43) in 17 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 74.0 (TID 44). 1429 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 74.0 (TID 44) in 18 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 74.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 74 (mapPartitions at GraphImpl.scala:207) finished in 0.023 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 75)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 75 (VertexRDDImpl[110] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 13.3 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on 192.168.50.93:37701 (size: 5.5 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 75 (VertexRDDImpl[110] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 75.0 with 1 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 75.0 (TID 45) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4908 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 75.0 (TID 45)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_95_0 locally
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (850.0 B) non-empty blocks including 2 (850.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO MemoryStore: Block rdd_109_0 stored as values in memory (estimated size 4.1 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added rdd_109_0 in memory on 192.168.50.93:37701 (size: 4.1 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 75.0 (TID 45)
+[rdd_109_0]
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 75.0 (TID 45). 1486 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 75.0 (TID 45) in 10 ms on 192.168.50.93 (executor driver) (1/1)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 75.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 75 (isEmpty at Pregel.scala:161) finished in 0.016 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 75: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 6 finished: isEmpty at Pregel.scala:161, took 0.077391 s
+22/12/13 00:01:12 INFO Pregel: Pregel finished iteration 4
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 93 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 93
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 79 from persistence list
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 85 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 79
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 77 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 85
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 93 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 77
+22/12/13 00:01:12 INFO ZippedPartitionsRDD2: Removing RDD 109 from persistence list
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 93
+22/12/13 00:01:12 INFO BlockManager: Removing RDD 109
+22/12/13 00:01:12 INFO SparkContext: Starting job: sortBy at lpa.scala:68
+22/12/13 00:01:12 INFO DAGScheduler: Got job 7 (sortBy at lpa.scala:68) with 2 output partitions
+22/12/13 00:01:12 INFO DAGScheduler: Final stage: ResultStage 92 (sortBy at lpa.scala:68)
+22/12/13 00:01:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 88, ShuffleMapStage 85, ShuffleMapStage 82, ShuffleMapStage 79, ShuffleMapStage 76, ShuffleMapStage 91)
+22/12/13 00:01:12 INFO DAGScheduler: Missing parents: List()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 92 (MapPartitionsRDD[113] at sortBy at lpa.scala:68), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 14.5 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on 192.168.50.93:37701 (size: 6.0 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 92 (MapPartitionsRDD[113] at sortBy at lpa.scala:68) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 92.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 92.0 (TID 46) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4867 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 92.0 (TID 47) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4867 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 92.0 (TID 47)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 92.0 (TID 46)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_95_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_95_0 locally
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 92.0 (TID 46)
+[rdd_95_0]
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 1.0 in stage 92.0 (TID 47)
+[rdd_95_1]
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 92.0 (TID 47). 1292 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 92.0 (TID 46). 1292 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 92.0 (TID 47) in 19 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 92.0 (TID 46) in 19 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 92.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 92 (sortBy at lpa.scala:68) finished in 0.024 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 92: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 7 finished: sortBy at lpa.scala:68, took 0.030737 s
+22/12/13 00:01:12 INFO SparkContext: Starting job: foreach at lpa.scala:68
+22/12/13 00:01:12 INFO DAGScheduler: Registering RDD 111 (sortBy at lpa.scala:68) as input to shuffle 19
+22/12/13 00:01:12 INFO DAGScheduler: Got job 8 (foreach at lpa.scala:68) with 2 output partitions
+22/12/13 00:01:12 INFO DAGScheduler: Final stage: ResultStage 110 (foreach at lpa.scala:68)
+22/12/13 00:01:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 109)
+22/12/13 00:01:12 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 109)
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ShuffleMapStage 109 (MapPartitionsRDD[111] at sortBy at lpa.scala:68), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 13.4 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on 192.168.50.93:37701 (size: 5.8 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 109 (MapPartitionsRDD[111] at sortBy at lpa.scala:68) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 109.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 109.0 (TID 48) (192.168.50.93, executor driver, partition 0, PROCESS_LOCAL, 4856 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 109.0 (TID 49) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4856 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 109.0 (TID 49)
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 109.0 (TID 48)
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_95_1 locally
+22/12/13 00:01:12 INFO BlockManager: Found block rdd_95_0 locally
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 1.0 in stage 109.0 (TID 49)
+[rdd_95_1]
+22/12/13 00:01:12 INFO Executor: 1 block locks were not released by task 0.0 in stage 109.0 (TID 48)
+[rdd_95_0]
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 109.0 (TID 49). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 109.0 (TID 48). 1128 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 109.0 (TID 49) in 13 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 109.0 (TID 48) in 15 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 109.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ShuffleMapStage 109 (sortBy at lpa.scala:68) finished in 0.023 s
+22/12/13 00:01:12 INFO DAGScheduler: looking for newly runnable stages
+22/12/13 00:01:12 INFO DAGScheduler: running: Set()
+22/12/13 00:01:12 INFO DAGScheduler: waiting: Set(ResultStage 110)
+22/12/13 00:01:12 INFO DAGScheduler: failed: Set()
+22/12/13 00:01:12 INFO DAGScheduler: Submitting ResultStage 110 (MapPartitionsRDD[115] at sortBy at lpa.scala:68), which has no missing parents
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 5.7 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 3.1 KiB, free 433.7 MiB)
+22/12/13 00:01:12 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on 192.168.50.93:37701 (size: 3.1 KiB, free: 434.2 MiB)
+22/12/13 00:01:12 INFO SparkContext: Created broadcast 29 from broadcast at DAGScheduler.scala:1513
+22/12/13 00:01:12 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 110 (MapPartitionsRDD[115] at sortBy at lpa.scala:68) (first 15 tasks are for partitions Vector(0, 1))
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Adding task set 110.0 with 2 tasks resource profile 0
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 0.0 in stage 110.0 (TID 50) (192.168.50.93, executor driver, partition 0, NODE_LOCAL, 4271 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO TaskSetManager: Starting task 1.0 in stage 110.0 (TID 51) (192.168.50.93, executor driver, partition 1, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+22/12/13 00:01:12 INFO Executor: Running task 0.0 in stage 110.0 (TID 50)
+22/12/13 00:01:12 INFO Executor: Running task 1.0 in stage 110.0 (TID 51)
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Getting 2 (810.0 B) non-empty blocks including 2 (810.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/13 00:01:12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22 is in 2
+14 is in 2
+8 is in 2
+12 is in 2
+18 is in 2
+20 is in 2
+13 is in 2
+11 is in 2
+7 is in 2
+5 is in 2
+34 is in 23
+4 is in 32
+16 is in 32
+28 is in 32
+30 is in 32
+32 is in 32
+24 is in 32
+6 is in 32
+26 is in 32
+10 is in 32
+2 is in 32
+19 is in 32
+15 is in 32
+21 is in 32
+25 is in 32
+29 is in 32
+27 is in 32
+33 is in 32
+23 is in 32
+1 is in 32
+17 is in 32
+3 is in 32
+9 is in 32
+31 is in 32
+22/12/13 00:01:12 INFO Executor: Finished task 1.0 in stage 110.0 (TID 51). 1275 bytes result sent to driver
+22/12/13 00:01:12 INFO Executor: Finished task 0.0 in stage 110.0 (TID 50). 1275 bytes result sent to driver
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 1.0 in stage 110.0 (TID 51) in 34 ms on 192.168.50.93 (executor driver) (1/2)
+22/12/13 00:01:12 INFO TaskSetManager: Finished task 0.0 in stage 110.0 (TID 50) in 35 ms on 192.168.50.93 (executor driver) (2/2)
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Removed TaskSet 110.0, whose tasks have all completed, from pool 
+22/12/13 00:01:12 INFO DAGScheduler: ResultStage 110 (foreach at lpa.scala:68) finished in 0.039 s
+22/12/13 00:01:12 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/13 00:01:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 110: Stage finished
+22/12/13 00:01:12 INFO DAGScheduler: Job 8 finished: foreach at lpa.scala:68, took 0.069637 s
+22/12/13 00:01:12 INFO SparkContext: Invoking stop() from shutdown hook
+22/12/13 00:01:12 INFO SparkUI: Stopped Spark web UI at http://192.168.50.93:4040
+22/12/13 00:01:12 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/12/13 00:01:12 INFO MemoryStore: MemoryStore cleared
+22/12/13 00:01:12 INFO BlockManager: BlockManager stopped
+22/12/13 00:01:12 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/12/13 00:01:12 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/12/13 00:01:12 INFO SparkContext: Successfully stopped SparkContext
+22/12/13 00:01:12 INFO ShutdownHookManager: Shutdown hook called
+22/12/13 00:01:12 INFO ShutdownHookManager: Deleting directory /tmp/spark-d7fe0caf-13cc-4da1-a2f1-b2978e766c74
+22/12/13 00:01:12 INFO ShutdownHookManager: Deleting directory /tmp/spark-bd6bb74d-bdba-4324-977a-706f7e2c9457

@@ -1,0 +1,13 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/sfwu22/LPA/target/scala-2.12/lpa-test_2.12-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonObj$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/sfwu22/LPA/target/scala-2.12/classes/JsonObj$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonReader.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/sfwu22/LPA/target/scala-2.12/classes/JsonReader.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LPA$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/sfwu22/LPA/target/scala-2.12/classes/LPA$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonObj.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/sfwu22/LPA/target/scala-2.12/classes/JsonObj.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LPA.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/sfwu22/LPA/target/scala-2.12/classes/LPA.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

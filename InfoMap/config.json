@@ -1,0 +1,27 @@
+{
+  "Graph": "data/polblogs/polblogs.net",
+  "spark configs": {
+    "Master": "local[*]",
+    "num executors": "1",
+    "executor cores": "8",
+    "driver memory": "10G",
+    "executor memory": "10G"
+  },
+  "PageRank": {
+    "tele": 0.15,
+    "error threshold factor": 20
+  },
+  "Community Detection": {
+    "name": "InfoMap",
+	"merge direction": "symmetric"
+  },
+  "log": {
+    "log path": "Output/log.txt",
+    "Parquet path": "",
+    "RDD path": "",
+    "txt path": "Output/vertex.txt",
+    "Full Json path": "",
+    "Reduced Json path": "Output/graph.json",
+    "debug": false
+  }
+}

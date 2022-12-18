@@ -1,0 +1,48 @@
+Wed Dec 14 00:14:37 HKT 2022: Running InfoMap, version: 1.1.1
+Wed Dec 14 00:14:37 HKT 2022: Driver memory/Java heap size: 1024 Mb
+Wed Dec 14 00:14:37 HKT 2022: Spark version: 3.3.1
+Wed Dec 14 00:14:37 HKT 2022: Spark configurations:
+Wed Dec 14 00:14:37 HKT 2022: spark.executor.memory: 10G
+Wed Dec 14 00:14:37 HKT 2022: spark.jars: file:/home/sfwu22/InfoMap/target/scala-2.12/infomap-test_2.12-1.1.1.jar
+Wed Dec 14 00:14:37 HKT 2022: spark.executor.instances: 1
+Wed Dec 14 00:14:37 HKT 2022: spark.master: local[*]
+Wed Dec 14 00:14:37 HKT 2022: spark.submit.pyFiles: 
+Wed Dec 14 00:14:37 HKT 2022: spark.submit.deployMode: client
+Wed Dec 14 00:14:37 HKT 2022: spark.driver.memory: 10G
+Wed Dec 14 00:14:37 HKT 2022: spark.app.submitTime: 1670948076376
+Wed Dec 14 00:14:37 HKT 2022: spark.app.name: InfoMap
+Wed Dec 14 00:14:37 HKT 2022: spark.executor.cores: 8
+Wed Dec 14 00:14:37 HKT 2022: Reading data/polblogs/polblogs.net
+Wed Dec 14 00:14:37 HKT 2022: Finished reading from disk; parallelizing...
+Wed Dec 14 00:14:40 HKT 2022: Read in network with 1490 nodes and 19025 edges
+Wed Dec 14 00:14:40 HKT 2022: Initializing partitioning
+Wed Dec 14 00:14:40 HKT 2022: Calculating PageRank
+Wed Dec 14 00:14:40 HKT 2022: PageRank teleportation probablity 0.15000000000000002
+Wed Dec 14 00:14:40 HKT 2022: PageRank error threshold factor 20.0
+Wed Dec 14 00:14:40 HKT 2022: Calculating PageRank, iteration 0
+Wed Dec 14 00:14:42 HKT 2022: Calculating PageRank, iteration 1
+Wed Dec 14 00:14:42 HKT 2022: Calculating PageRank, iteration 2
+Wed Dec 14 00:14:43 HKT 2022: Calculating PageRank, iteration 3
+Wed Dec 14 00:14:43 HKT 2022: Calculating PageRank, iteration 4
+Wed Dec 14 00:14:43 HKT 2022: Calculating PageRank, iteration 5
+Wed Dec 14 00:14:44 HKT 2022: Calculating PageRank, iteration 6
+Wed Dec 14 00:14:44 HKT 2022: Calculating PageRank, iteration 7
+Wed Dec 14 00:14:44 HKT 2022: Calculating PageRank, iteration 8
+Wed Dec 14 00:14:45 HKT 2022: Calculating PageRank, iteration 9
+Wed Dec 14 00:14:45 HKT 2022: Calculating PageRank, iteration 10
+Wed Dec 14 00:14:45 HKT 2022: Calculating PageRank, iteration 11
+Wed Dec 14 00:14:46 HKT 2022: Calculating PageRank, iteration 12
+Wed Dec 14 00:14:46 HKT 2022: Calculating PageRank, iteration 13
+Wed Dec 14 00:14:46 HKT 2022: Calculating PageRank, iteration 14
+Wed Dec 14 00:14:46 HKT 2022: Calculating PageRank, iteration 15
+Wed Dec 14 00:14:47 HKT 2022: Calculating PageRank, iteration 16
+Wed Dec 14 00:14:47 HKT 2022: Calculating PageRank, iteration 17
+Wed Dec 14 00:14:47 HKT 2022: Calculating PageRank, iteration 18
+Wed Dec 14 00:14:48 HKT 2022: Calculating PageRank, iteration 19
+Wed Dec 14 00:14:48 HKT 2022: Calculating PageRank, iteration 20
+Wed Dec 14 00:14:48 HKT 2022: Calculating PageRank, iteration 21
+Wed Dec 14 00:14:48 HKT 2022: Calculating PageRank, iteration 22
+Wed Dec 14 00:14:49 HKT 2022: Calculating PageRank, iteration 23
+Wed Dec 14 00:14:49 HKT 2022: Finished initialization calculations
+Wed Dec 14 00:16:33 HKT 2022: Save final graph
+Wed Dec 14 00:16:33 HKT 2022: with 484 modules and 692 connections
