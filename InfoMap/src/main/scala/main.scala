@@ -4,7 +4,7 @@ import org.apache.spark.SparkContext._
 
 
 object InfoMapMain {
-  def main(): Unit = {
+  def main(args: Array[String]): Unit = {
 
     // use default or alternative config file name
     val config_file = "config.json"
