@@ -18,7 +18,6 @@ object LPA {
 
         // load the input file
         val G = GraphLoader.edgeListFile(context, graphFile)
-        //val G = GraphLoader.edgeListFile(context, "/home/sfwu22/LPA/data/polblogs/polblogs.gml")
 
         // run lpa algorithm for several iterations
         val t1 = System.nanoTime //your first line of the code

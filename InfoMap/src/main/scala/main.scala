@@ -13,7 +13,7 @@ object InfoMapMain {
     val graph_file = config.getObj("Graph").value.toString
     val( spark, context ) = init_spark( config.getObj("spark configs") )
   	val params_config = config.getObj("Params")
-    val cdConfig = config.getObj("Community Detection")
+    val cdConfig = config.getObj("InfoMap")
     val logFile = init_log( context, config.getObj("log") )
 
     // debug
@@ -23,12 +23,12 @@ object InfoMapMain {
     val commu: Partition = subgraph_init( initial_graph, params_config, logFile )
 
     // create a new infomap instance 
-    val algo = {
+    val alg = {
         new InfoMap( cdConfig )
     }
-    // run infomap algorithm
+    // run infomap algrithm
     val t1 = System.nanoTime 
-    val(result_graph,result_commu) = algo( initial_graph, commu, logFile )
+    val(result_graph,result_commu) = alg( initial_graph, commu, logFile )
     val duration = (System.nanoTime - t1) / 1e9d
     println(s"Running time: $duration s")   
     save_result( result_graph, result_commu, logFile)
@@ -43,14 +43,14 @@ object InfoMapMain {
       val spark = new SparkConf()
         //.setAppName("InfoFlow")
         .setAppName("InfoMap")
-        .setMaster( master )
-        .set( "spark.executor.instances", numExecutors )
-        .set( "spark.executor.cores", executorCores )
-        .set( "spark.driver.memory", driverMemory )
-        .set( "spark.executor.memory", executorMemory )
+        .setMaster(master)
+        .set("spark.executor.instances", numExecutors )
+        .set("spark.executor.cores", executorCores )
+        .set("spark.driver.memory", driverMemory )
+        .set("spark.executor.memory", executorMemory )
       val sc = new SparkContext(spark)
       sc.setLogLevel("OFF")
-      ( spark, sc )
+      (spark, sc)
     }
 
     def init_log( sc: SparkContext, logConfig: JsonObj ): LogFile = new LogFile(

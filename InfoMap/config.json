@@ -1,5 +1,5 @@
 {
-  "Graph": "data/polblogs/polblogs.net",
+  "Graph": "data/karate/karate.net",
   "spark configs": {
     "Master": "local[*]",
     "num executors": "1",
@@ -11,16 +11,13 @@
     "tele": 0.15,
     "error threshold factor": 20
   },
-  "Community Detection": {
-    "name": "InfoMap",
+  "InfoMap": {
+  "name": "InfoMap",
 	"merge direction": "symmetric"
   },
   "log": {
     "log path": "Output/log.txt",
-    "Parquet path": "",
-    "RDD path": "",
     "txt path": "Output/vertex.txt",
-    "Full Json path": "",
     "Reduced Json path": "Output/graph.json",
     "debug": false
   }

@@ -54,10 +54,6 @@ object Partition
     ergodicFreq.cache
 
     // modular information
-    // since transition probability is normalized per "from" node,
-    // w and q are mathematically identical to p
-    // as long as there is at least one connection
-    // | id , size , prob , exitw , exitq |
     val vertices: RDD[(Long,(Long,Double,Double,Double))] = {
 
       val exitw: RDD[(Long,Double)] = edges
@@ -67,9 +63,6 @@ object Partition
       }
       .reduceByKey(_+_)
 
-      // since exitw is normalized per "from" node,
-      // exitw is always (from,freq)
-      // so calculations can be simplified
       ergodicFreq.leftOuterJoin(exitw)
       .map {
         //case (idx,(freq,Some(w))) => (idx,(1,freq,w,tele*freq+(1-tele)*w))
