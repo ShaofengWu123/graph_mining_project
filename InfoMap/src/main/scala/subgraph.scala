@@ -4,7 +4,7 @@ import org.apache.spark.rdd.RDD
 
 sealed case class Partition
 (
-  nodeNumber: Long, tele: Double,
+  node_num: Long, tele: Double,
   // | idx , n , p , w , q |
   vertices: RDD[(Long,(Long,Double,Double,Double))],
   // | index from , index to , weight |
@@ -28,7 +28,7 @@ object Partition
 	logFile: LogFile
   ): Partition = {
 
-    val nodeNumber: Long = graph.vertices.count
+    val node_num: Long = graph.vertices.count
 
     // filter away self-connections
     // and normalize edge weights per "from" node
@@ -75,7 +75,7 @@ object Partition
         //case (idx,(freq,Some(w))) => (idx,(1,freq,w,tele*freq+(1-tele)*w))
         case (idx,(freq,Some(_))) => (idx,(1,freq,freq,freq))
         case (idx,(freq,None))
-        => if( nodeNumber > 1) (idx,(1,freq,0,tele*freq))
+        => if( node_num > 1) (idx,(1,freq,0,tele*freq))
            else (idx,(1,1,0,0))
       }
     }
@@ -95,11 +95,11 @@ object Partition
 
     ergodicFreq.unpersist()
 
-    val codelength = InfoMap_Utils.calCodelength( vertices, probSum )
+    val codelength = InfoMap_Utils.codelen_calculate( vertices, probSum )
 
     // return Partition object
     Partition(
-      nodeNumber, tele,
+      node_num, tele,
       vertices, exitw,
       probSum, codelength
     )

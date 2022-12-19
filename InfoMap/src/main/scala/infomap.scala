@@ -152,8 +152,8 @@ class InfoMap extends InfoMap_Utils with Serializable
       val N12 = merge._2.n1 +merge._2.n2
       val P12 = merge._2.p1 +merge._2.p2
       val W12 = merge._2.w1 +merge._2.w2 -merge._2.w1221
-      val Q12 = InfoMap_Utils.calQ(
-        part.nodeNumber, N12, P12, part.tele, W12 )
+      val Q12 = InfoMap_Utils.Q_calculate(
+        part.node_num, N12, P12, part.tele, W12 )
 
       mergeList.filter {
         // delete the merged edge, ie, (merge1,merge2)
@@ -205,8 +205,8 @@ class InfoMap extends InfoMap_Utils with Serializable
         val n12 = merge._2.n1 +merge._2.n2
         val p12 = merge._2.p1 +merge._2.p2
         val w12 = merge._2.w1 +merge._2.w2 -merge._2.w1221
-        val q12 = InfoMap_Utils.calQ(
-          part.nodeNumber, n12, p12, part.tele, w12 )
+        val q12 = InfoMap_Utils.Q_calculate(
+          part.node_num, n12, p12, part.tele, w12 )
 
         // delete merged module
         part.vertices.filter {
@@ -246,7 +246,7 @@ class InfoMap extends InfoMap_Utils with Serializable
       }
 
       Partition(
-        part.nodeNumber, part.tele,
+        part.node_num, part.tele,
         newVertices, newEdges,
         part.probSum,
         part.codelength +merge._2.dL
@@ -259,8 +259,8 @@ class InfoMap extends InfoMap_Utils with Serializable
       val n12 = merge._2.n1 +merge._2.n2
       val p12 = merge._2.p1 +merge._2.p2
       val w12 = merge._2.w1 +merge._2.w2 -merge._2.w1221
-      val q12 = InfoMap_Utils.calQ(
-        part.nodeNumber, n12, p12, part.tele, w12 )
+      val q12 = InfoMap_Utils.Q_calculate(
+        part.node_num, n12, p12, part.tele, w12 )
       val q1 = merge._2.q1
       val q2 = merge._2.q2
       qi_sum +q12 -q1 -q2
