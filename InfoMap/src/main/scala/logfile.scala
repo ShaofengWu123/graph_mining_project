@@ -1,7 +1,7 @@
 import org.apache.spark.rdd.RDD
 
 import org.apache.spark.SparkContext
-import org.apache.spark.sql._ // needed to save as Parquet format
+//import org.apache.spark.sql._ // needed to save as Parquet format
 
 import java.util.Calendar
 
@@ -62,23 +62,6 @@ sealed class LogFile(
 
 object LogFile
 {
-  def saveParquet( filename: String, ext: String,
-    graph: Graph, part: Partition, sc: SparkContext ): Unit = {
-    val sqlContext= new org.apache.spark.sql.SQLContext(sc)
-    import sqlContext.implicits._
-    graph.vertices.toDF.write.parquet( s"$filename-graph-vertices$ext" )
-    graph.edges.toDF.write.parquet( s"$filename-graph-edges$ext" )
-    part.vertices.saveAsTextFile( s"$filename-part-vertices$ext" )
-    part.edges.saveAsTextFile( s"$filename-part-edges$ext" )
-  }
-  def saveRDD( filename: String, ext: String,
-  graph: Graph, part: Partition ): Unit = {
-    graph.vertices.saveAsTextFile( s"$filename-graph-vertices$ext" )
-    graph.edges.saveAsTextFile( s"$filename-graph-edges$ext" )
-    part.vertices.saveAsTextFile( s"$filename-part-vertices$ext" )
-    part.edges.saveAsTextFile( s"$filename-part-edges$ext" )
-  }
-
   def saveTxt( filename: String, ext: String, graph: Graph ): Unit = {
     def pad( string: String, totalLength: Int ): String = {
       var padding = ""
@@ -99,7 +82,7 @@ object LogFile
     }
     ._2._1.length, 4 )
 
-    txtFile.write(s"Index   | Module \n")
+    //txtFile.write(s"Index   | Module \n")
 
     for( vertex <- vertices ) {
       vertex match {

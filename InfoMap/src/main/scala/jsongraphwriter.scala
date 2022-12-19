@@ -1,7 +1,3 @@
-/***************************************************************************
- * Write graph into local Json file for visualization
- ***************************************************************************/
-
 import java.io._
 
 sealed case class JsonGraph

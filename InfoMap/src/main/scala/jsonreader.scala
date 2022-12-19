@@ -1,26 +1,26 @@
 import scala.util.parsing.json._
 
-  sealed case class JsonObj( value: Any ) {
-    def getObj( keys: String* ): JsonObj = _getObj( keys.toList )
-    def _getObj( keys: List[String] ): JsonObj = {
-      try {
-        keys match {
-          case key::Nil =>
-            JsonObj( value.asInstanceOf[Map[String,Any]] (key) )
-          case key :: nextkeys => {
-            val nextObj = JsonObj(
-              value.asInstanceOf[Map[String,Any]] (key) )
-            nextObj._getObj(nextkeys)
-          }
-		  case Nil => throw new Exception("Json parsing error")
-	    }
-	  }
-      catch {
-        case e: java.lang.ClassCastException =>  throw e
-        case e: Throwable => throw(e)
-      }
+sealed case class JsonObj( value: Any ) {
+  def getObj( keys: String* ): JsonObj = _getObj( keys.toList )
+  def _getObj( keys: List[String] ): JsonObj = {
+    try {
+      keys match {
+        case key::Nil =>
+          JsonObj( value.asInstanceOf[Map[String,Any]] (key) )
+        case key :: nextkeys => {
+          val nextObj = JsonObj(
+            value.asInstanceOf[Map[String,Any]] (key) )
+          nextObj._getObj(nextkeys)
+        }
+    case Nil => throw new Exception("Json parsing error")
     }
   }
+    catch {
+      case e: java.lang.ClassCastException =>  throw e
+      case e: Throwable => throw(e)
+    }
+  }
+}
 
 sealed class JsonReader( filename: String )
 {
