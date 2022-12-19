@@ -48,21 +48,9 @@ sealed class LogFile(
 
     if( !debugging || debug ) {
       val exext = if(debugging) debugExt else ""
-      if( !pathParquet.isEmpty ) {
-        val (filename,ext) = splitFilepath(pathParquet)
-        LogFile.saveParquet( filename, exext+ext, graph, part, sc )
-      }
-      if( !pathRDD.isEmpty ) {
-        val (filename,ext) = splitFilepath(pathRDD)
-        LogFile.saveRDD( filename, exext+ext, graph, part )
-      }
       if( !pathTxt.isEmpty ) {
         val (filename,ext) = splitFilepath(pathTxt)
         LogFile.saveTxt( filename, exext+ext, graph )
-      }
-      if( !pathFullJson.isEmpty ) {
-        val (filename,ext) = splitFilepath(pathFullJson)
-        LogFile.saveFullJson( filename, exext+ext, graph )
       }
       if( !pathReducedJson.isEmpty ) {
         val (filename,ext) = splitFilepath(pathReducedJson)
