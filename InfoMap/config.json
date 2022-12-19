@@ -7,7 +7,7 @@
     "driver memory": "10G",
     "executor memory": "10G"
   },
-  "PageRank": {
+  "Params": {
     "tele": 0.15,
     "error threshold factor": 20
   },

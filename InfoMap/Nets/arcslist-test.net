@@ -1,9 +1,0 @@
-*Vertices      6
-       1 "1"
-       2 "2"
-       3 "3"
-*EdgesList
-       1 2 3 4
-       2 1 2 6
-*Arcslist :l "asdf"
-3 4 2

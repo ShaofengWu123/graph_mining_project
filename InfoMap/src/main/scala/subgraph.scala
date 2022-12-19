@@ -1,12 +1,3 @@
-/*****************************************************************************
- * store graph data that are relevant to community detection
- * which involves a few scalar (Double or Long) variables
- * and a graph (vertices and edges)
- * importantly, the graph stores reduced graph
- * where each node represents a module/community
- * this reduced graph can be combined with the original graph (Graph object)
- *****************************************************************************/
-
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
@@ -19,19 +10,9 @@ sealed case class Partition
   // | index from , index to , weight |
   edges: RDD[(Long,(Long,Double))],
   // sum of plogp(ergodic frequency), for codelength calculation
-  // this can only be calculated when each node is its own module
-  // i.e. in Partition.init()
   probSum: Double,
   codelength: Double // codelength given the modular partitioning
 )
-
-/*****************************************************************************
- * given a Graph (probably from GraphFile.graph)
- * and the PageRank teleportation probability
- * calculate PageRank and exit probabilities for each node
- * these are put and returned to a Partition object
- * which can be used for community detection
- *****************************************************************************/
 
 object Partition
 {
@@ -108,13 +89,13 @@ object Partition
 	exitw.cache
 
     val probSum = ergodicFreq.map {
-      case (_,p) => CommunityDetection.plogp(p)
+      case (_,p) => InfoMap_Utils.plogp(p)
     }
     .sum
 
     ergodicFreq.unpersist()
 
-    val codelength = CommunityDetection.calCodelength( vertices, probSum )
+    val codelength = InfoMap_Utils.calCodelength( vertices, probSum )
 
     // return Partition object
     Partition(

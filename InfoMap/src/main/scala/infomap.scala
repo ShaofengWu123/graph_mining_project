@@ -1,16 +1,10 @@
-/*****************************************************************************
- * ORIGINAL INFOMAP ALGORITHM
- * the function to partition of nodes into modules based on
- * greedily merging the pair of modules that gives
- * the greatest code length reduction
- * until code length is minimized
- *****************************************************************************/
-
 import org.apache.spark.rdd.RDD
 
-class InfoMap extends CommunityDetection with Serializable
+class InfoMap extends InfoMap_Utils with Serializable
 {
+  //def this( config: JsonObj ) = this
   def this( config: JsonObj ) = this
+
   case class Merge
   (
     n1: Long, n2: Long, p1: Double, p2: Double,
@@ -38,7 +32,7 @@ class InfoMap extends CommunityDetection with Serializable
       if( mergeList.count == 0 )
         return terminate( loop, logFile, graph, part )
 
-      val merge = findMerge(mergeList)
+      val merge = merge_find(mergeList)
       if( merge._2.dL > 0 )
         return terminate( loop, logFile, graph, part )
 
@@ -47,15 +41,15 @@ class InfoMap extends CommunityDetection with Serializable
       //   +s" with code length reduction ${merge._2.dL}\n",
       // false )
 
-      val new_qi_sum = cal_qi_sum( part, merge, qi_sum )
-      val newPart = calPart( part, merge )
-      val newGraph = calGraph( graph, merge )
-      val newMergeList = updateMergeList(
+      val new_qi_sum = qsum_calculate( part, merge, qi_sum )
+      val newPart = part_calculate( part, merge )
+      val newGraph = graph_calculate( graph, merge )
+      val newMergeList = mergelist_update(
         merge, mergeList, newPart, new_qi_sum )
       recursiveMerge( loop+1, new_qi_sum, newGraph, newPart, newMergeList )
     }
 
-    def genMergeList( part: Partition, qi_sum: Double ) = {
+    def mergel_gen( part: Partition, qi_sum: Double ) = {
       // merges are  nondirectional edges
       part.edges.map {
         case (from,(to,weight)) =>
@@ -78,7 +72,7 @@ class InfoMap extends CommunityDetection with Serializable
         Merge(
           n1,n2,p1,p2,w1,w2,w1221,q1,q2,
           // calculate dL
-          CommunityDetection.calDeltaL(
+          InfoMap_Utils.detltaL_calculate(
             part, n1,n2,p1,p2, w1+w2-w1221, qi_sum,q1,q2 ))
         )
       }
@@ -107,7 +101,20 @@ class InfoMap extends CommunityDetection with Serializable
       ( graph, part )
     }
 
-    def findMerge( mergeList: RDD[((Long,Long),Merge)] ) = {
+    def graph_calculate(graph: Graph, merge: ((Long,Long),Merge) ) = {
+      Graph(
+        graph.vertices.map {
+          case (idx,(name,module)) =>
+            if( module==merge._1._1 || module==merge._1._2 )
+              (idx,(name,merge._1._1))
+            else
+              (idx,(name,module))
+        },
+        graph.edges
+      )
+    }
+
+    def merge_find( mergeList: RDD[((Long,Long),Merge)] ) = {
       mergeList.reduce {
         case (
           ((merge1A,merge2A),
@@ -132,20 +139,8 @@ class InfoMap extends CommunityDetection with Serializable
       }
     }
 
-    def calGraph( graph: Graph, merge: ((Long,Long),Merge) ) = {
-      Graph(
-        graph.vertices.map {
-          case (idx,(name,module)) =>
-            if( module==merge._1._1 || module==merge._1._2 )
-              (idx,(name,merge._1._1))
-            else
-              (idx,(name,module))
-        },
-        graph.edges
-      )
-    }
 
-    def updateMergeList(
+    def mergelist_update(
       merge: ((Long,Long),Merge),
       mergeList: RDD[((Long,Long),Merge)],
       part: Partition,
@@ -157,7 +152,7 @@ class InfoMap extends CommunityDetection with Serializable
       val N12 = merge._2.n1 +merge._2.n2
       val P12 = merge._2.p1 +merge._2.p2
       val W12 = merge._2.w1 +merge._2.w2 -merge._2.w1221
-      val Q12 = CommunityDetection.calQ(
+      val Q12 = InfoMap_Utils.calQ(
         part.nodeNumber, N12, P12, part.tele, W12 )
 
       mergeList.filter {
@@ -198,19 +193,19 @@ class InfoMap extends CommunityDetection with Serializable
         ) => (
           (m1,m2),
           Merge(n1,n2,p1,p2,w1,w2,w1221,q1,q2,
-              CommunityDetection.calDeltaL(part,
+              InfoMap_Utils.detltaL_calculate(part,
                 n1,n2,p1,p2,w1+w2-w1221,qi_sum,q1,q2))
         )
       }
     }
 
-    def calPart( part: Partition, merge: ((Long,Long),Merge) ) = {
+    def part_calculate( part: Partition, merge: ((Long,Long),Merge) ) = {
       val newVertices = {
         // calculate properties of merged module
         val n12 = merge._2.n1 +merge._2.n2
         val p12 = merge._2.p1 +merge._2.p2
         val w12 = merge._2.w1 +merge._2.w2 -merge._2.w1221
-        val q12 = CommunityDetection.calQ(
+        val q12 = InfoMap_Utils.calQ(
           part.nodeNumber, n12, p12, part.tele, w12 )
 
         // delete merged module
@@ -258,13 +253,13 @@ class InfoMap extends CommunityDetection with Serializable
       )
     }
 
-    def cal_qi_sum(
+    def qsum_calculate(
       part: Partition, merge: ((Long,Long),Merge), qi_sum: Double )
     = {
       val n12 = merge._2.n1 +merge._2.n2
       val p12 = merge._2.p1 +merge._2.p2
       val w12 = merge._2.w1 +merge._2.w2 -merge._2.w1221
-      val q12 = CommunityDetection.calQ(
+      val q12 = InfoMap_Utils.calQ(
         part.nodeNumber, n12, p12, part.tele, w12 )
       val q1 = merge._2.q1
       val q2 = merge._2.q2
@@ -274,7 +269,8 @@ class InfoMap extends CommunityDetection with Serializable
     val qi_sum = part.vertices.map {
       case (_,(_,_,_,q)) => q
     }.sum
-    val edgeList = genMergeList( part, qi_sum )
+    val edgeList = mergel_gen( part, qi_sum )
+
     recursiveMerge( 0, qi_sum, graph, part, edgeList )
   }
 }
