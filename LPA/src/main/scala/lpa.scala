@@ -26,11 +26,10 @@ object LPA {
 
         println(s"Running time: $duration s")    
 
-        log_file.save( G_result, false, "" )
-        // // debug print result
-        // newgraph.vertices.sortBy(_._2).foreach {
-        //     case (id, (group)) => println(s"$id is in $group")
-        // }
+        // log_file.save( G_result, false, "" )
+        newgraph.vertices.sortBy(_._2).foreach {
+            case (id, (group)) => println(s"$id $group")
+        }
     }
 
     // initialize Spark context
