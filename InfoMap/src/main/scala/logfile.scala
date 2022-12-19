@@ -79,11 +79,7 @@ object LogFile
     part.edges.saveAsTextFile( s"$filename-part-edges$ext" )
   }
 
-  // save as local text file
-  // only vertex data.are saved,
-  // since edge data can be saved via Json graphs
   def saveTxt( filename: String, ext: String, graph: Graph ): Unit = {
-    // for spacing consistency, needs to pad vertex names with spacing
     def pad( string: String, totalLength: Int ): String = {
       var padding = ""
       for( i <- string.length+1 to totalLength )
@@ -103,7 +99,6 @@ object LogFile
     }
     ._2._1.length, 4 )
 
-    txtFile.write(s"Index   | ${pad("Name",maxNameLength)} | Module \n")
     txtFile.write(s"Index   | Module \n")
 
     for( vertex <- vertices ) {
@@ -111,38 +106,12 @@ object LogFile
         // case (idx,(name,module)) => txtFile.write(
         //   "%7d | %s | %7d\n".format( idx, pad(name,maxNameLength), module )
         // )
-        case (idx,(name,module)) => txtFile.write(
-          "%d %d\n".format(idx, module)
-        )
         case (idx,(name,module)) => txtFile.write("%d %d\n".format( idx, module ))
       }
     }
     txtFile.close
   }
 
-  def saveFullJson( filename: String, ext: String, graph: Graph ) = {
-    // fake nodes to preserve group ordering/coloring
-    val fakeNodes = graph.vertices.map {
-      case (idx,_) => (-idx,("",idx,0L,0.0))
-    }
-    .collect
-    val vertices = graph.vertices.map {
-      case (id,(name,module)) => (id,(name,module,1L,1.0))
-    }
-    .collect ++fakeNodes
-    val edges = graph.edges.map {
-      case (from,(to,weight)) => ((from,to),weight)
-    }
-    .collect.sorted
-    val newGraph = JsonGraph( vertices.sorted, edges )
-    JsonGraphWriter( s"$filename$ext", newGraph )
-  }
-
-  /***************************************************************************
-   * save graph as Json for visualization
-   * each node is a module
-   * names are always empty string
-   ***************************************************************************/
   def saveReducedJson( filename: String, ext: String, part: Partition ) = {
     val vertices = part.vertices.map {
       case (id,(n,p,_,_)) => (id,(id.toString,id,n,p))
