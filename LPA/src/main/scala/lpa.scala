@@ -8,24 +8,25 @@ import scala.reflect.ClassTag
 
 object LPA {
     def main(args: Array[String]): Unit = {
-        val configFileName = "config.json"
-        val config = new JsonReader(configFileName)
-        val graphFile = config.getObj("Graph").value.toString
+        val config_file = "config.json"
+        val config = new JsonReader(config_file)
+        val graph_file = config.getObj("Graph").value.toString
         val( spark, context ) = init_spark( config.getObj("spark configs") )
-        val LPAConfig = config.getObj("LPA")
-        //val logFile = initLog( context, config.getObj("log") )
-        
+        val LPA_config = config.getObj("LPA")
+        val num_iter = LPA_config.getObj("num iterations").value.toString.toInt
+        val log_file = init_log( context, config.getObj("log") )
 
         // load the input file
-        val G = GraphLoader.edgeListFile(context, graphFile)
+        val G = GraphLoader.edgeListFile(context, graph_file)
 
         // run lpa algorithm for several iterations
-        val t1 = System.nanoTime //your first line of the code
-        val num_iter = LPAConfig.getObj("num iterations").value.toString.toInt
+        val t1 = System.nanoTime
         val G_result = lpa(G,num_iter)
         val duration = (System.nanoTime - t1) / 1e9d
 
         println(s"Running time: $duration s")    
+
+        log_file.save( graph, part, false, "" )
         // // debug print result
         // newgraph.vertices.sortBy(_._2).foreach {
         //     case (id, (group)) => println(s"$id is in $group")
@@ -48,23 +49,6 @@ object LPA {
             .set( "spark.executor.memory", executorMemory )
 
         val context = new SparkContext(spark)
-        // val spark = SparkSession
-        //     .builder
-        //     .appName(s"${this.getClass.getSimpleName}")
-        //     .getOrCreate()
-        
-        
-        //val context = spark.sparkContext
-        // val spark = new SparkConf()
-        //.setAppName("InfoFlow")
-        // .setAppName("LPA")
-        // .setMaster( master )
-        // .set( "spark.executor.instances", numExecutors )
-        // .set( "spark.executor.cores", executorCores )
-        // .set( "spark.driver.memory", driverMemory )
-        // .set( "spark.executor.memory", executorMemory )
-        //val sc = new SparkContext(spark)
-        // sc.setLogLevel("OFF")
         ( spark, context )
     }
 
@@ -101,5 +85,14 @@ object LPA {
             mergeMsg = msg_merge
         )
     }
+
+    def init_log( sc: SparkContext, logConfig: JsonObj ): LogFile = new LogFile(
+      sc,
+      logConfig.getObj("log path").value.toString,
+      logConfig.getObj("txt path").value.toString,
+      logConfig.getObj("Reduced Json path").value.toString,
+      logConfig.getObj("debug").value.toString.toBoolean
+    )
+
 
 }

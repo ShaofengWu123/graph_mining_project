@@ -12,11 +12,8 @@
   },
   "log": {
     "log path": "Output/log.txt",
-    "Parquet path": "",
-    "RDD path": "",
     "txt path": "Output/vertex.txt",
-    "Full Json path": "",
-    "Reduced Json path": "Output/graph.json",
+    "Reduced Json path": "",
     "debug": false
   }
 }
