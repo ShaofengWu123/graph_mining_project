@@ -31,7 +31,7 @@ object InfoMapMain {
     val(result_graph,result_commu) = alg( initial_graph, commu, logFile )
     val duration = (System.nanoTime - t1) / 1e9d
     println(s"Running time: $duration s")   
-    save_result( result_graph, result_commu, logFile)
+    save_result(result_graph, result_commu, logFile)
   }
 
     def init_spark( sparkConfig: JsonObj ): (SparkConf,SparkContext) = {
@@ -56,10 +56,7 @@ object InfoMapMain {
     def init_log( sc: SparkContext, logConfig: JsonObj ): LogFile = new LogFile(
       sc,
       logConfig.getObj("log path").value.toString,
-      logConfig.getObj("Parquet path").value.toString,
-      logConfig.getObj("RDD path").value.toString,
       logConfig.getObj("txt path").value.toString,
-      logConfig.getObj("Full Json path").value.toString,
       logConfig.getObj("Reduced Json path").value.toString,
       logConfig.getObj("debug").value.toString.toBoolean
     )
