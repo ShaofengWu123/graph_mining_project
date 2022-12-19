@@ -26,7 +26,7 @@ object LPA {
 
         println(s"Running time: $duration s")    
 
-        log_file.save( graph, false, "" )
+        log_file.save( G_result, false, "" )
         // // debug print result
         // newgraph.vertices.sortBy(_._2).foreach {
         //     case (id, (group)) => println(s"$id is in $group")
@@ -69,8 +69,6 @@ object LPA {
             (cnt1.keySet ++ cnt2.keySet).foreach { 
                 i =>
                 val cntval = cnt1.getOrElse(i, 0L) + cnt2.getOrElse(i, 0L)
-                //val cnt2_val = cnt2.getOrElse(i, 0L)
-
                 map.put(i, cntval)
             }
             map
@@ -79,7 +77,7 @@ object LPA {
         def vprogram(vid: VertexId, attr: Long, msg: Map[VertexId, Long]): VertexId = {if (msg.isEmpty) attr else msg.maxBy(_._2)._1}
             val init_msg = Map[VertexId, Long]()
 
-            Pregel(lpaGraph,init_msg,maxIterations=max_round)(
+        Pregel(lpaGraph,init_msg,maxIterations=max_round)(
             vprog = vprogram,
             sendMsg = msg_send,
             mergeMsg = msg_merge

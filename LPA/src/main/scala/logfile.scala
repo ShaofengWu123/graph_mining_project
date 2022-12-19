@@ -56,7 +56,7 @@ sealed class LogFile(
 
 object LogFile
 {
-  def saveTxt( filename: String, ext: String, graph: Graph[VertexId, ED] ): Unit = {
+  def saveTxt( filename: String, ext: String, graph: Graph[VD, ED] ): Unit = {
     def pad( string: String, totalLength: Int ): String = {
       var padding = ""
       for( i <- string.length+1 to totalLength )
