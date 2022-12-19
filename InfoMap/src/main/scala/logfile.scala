@@ -10,10 +10,7 @@ import java.io._
 sealed class LogFile(
   val sc:               SparkContext, 
   val pathLog:          String, 
-  val pathParquet:      String, 
-  val pathRDD:          String, 
   val pathTxt:          String, 
-  val pathFullJson:     String, 
   val pathReducedJson:  String, 
   val debug:            Boolean 
 )
