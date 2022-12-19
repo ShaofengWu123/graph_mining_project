@@ -30,9 +30,8 @@ sealed class LogFile(
   def close = if( !pathLog.isEmpty ) logFile.close
 
   def save(
-    graph: Graph,
+    graph: Graph[VertexId, ED],
     // part: reduced graph, where each node is a community
-    part: Partition,
     debugging: Boolean,
     debugExt: String // this string is appended to file name (for debugging)
   ): Unit = {
@@ -57,7 +56,7 @@ sealed class LogFile(
 
 object LogFile
 {
-  def saveTxt( filename: String, ext: String, graph: Graph ): Unit = {
+  def saveTxt( filename: String, ext: String, graph: Graph[VertexId, ED] ): Unit = {
     def pad( string: String, totalLength: Int ): String = {
       var padding = ""
       for( i <- string.length+1 to totalLength )

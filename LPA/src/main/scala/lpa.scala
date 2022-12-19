@@ -26,7 +26,7 @@ object LPA {
 
         println(s"Running time: $duration s")    
 
-        log_file.save( graph, part, false, "" )
+        log_file.save( graph, false, "" )
         // // debug print result
         // newgraph.vertices.sortBy(_._2).foreach {
         //     case (id, (group)) => println(s"$id is in $group")
