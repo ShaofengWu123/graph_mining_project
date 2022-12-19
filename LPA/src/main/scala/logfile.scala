@@ -1,5 +1,6 @@
 import org.apache.spark.rdd.RDD
 import org.apache.spark.graphx._
+import scala.reflect.ClassTag
 import org.apache.spark.SparkContext
 
 import java.util.Calendar
@@ -29,9 +30,8 @@ sealed class LogFile(
     }
   def close = if( !pathLog.isEmpty ) logFile.close
 
-  def save(
+  def save[ED: ClassTag](
     graph: Graph[VertexId, ED],
-    // part: reduced graph, where each node is a community
     debugging: Boolean,
     debugExt: String // this string is appended to file name (for debugging)
   ): Unit = {
@@ -56,7 +56,7 @@ sealed class LogFile(
 
 object LogFile
 {
-  def saveTxt( filename: String, ext: String, graph: Graph[VD, ED] ): Unit = {
+  def saveTxt[ED: ClassTag]( filename: String, ext: String, graph: Graph[VertexId, ED] ): Unit = {
     def pad( string: String, totalLength: Int ): String = {
       var padding = ""
       for( i <- string.length+1 to totalLength )
