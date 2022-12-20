@@ -21,22 +21,22 @@ class Graph:
     def calculate_Q(self):
         Q_value = 0
         for key in self.cur_community.keys():
+            print("community",key)
             c = self.cur_community[key]
             degrees = 0
             inter_edges = 0
             for u in c:
                 u_neighbors = set(nx.all_neighbors(self.G, u))
                 degrees += len(u_neighbors)
-                if key == 1:
-                    #print(u_neighbors)
+                print(u_neighbors)
                 for nbr in u_neighbors:
                     if nbr in c:
                         inter_edges += 1
             inter_edges /= 2
             # degrees *= 2
             cq = (float(inter_edges) / self.edges_number) - (float(degrees) / (2 * self.edges_number))**2
-            # #print("Degree",degrees)
-            # #print("inter_edges",inter_edges)
+            print("Degree",degrees)
+            print("inter_edges",inter_edges)
             # #print("cq",cq)
             # #print("edge num",self.edges_number)
             # #print((inter_edges / self.edges_number))
@@ -47,8 +47,9 @@ node_number = 34
 nodes = range(1,node_number,1)
 #print(nodes)
 
-edges_file = "./LPA_edges.txt"
-community_file = "./LPA_community.txt"
+edges_file = "./karate_edges.txt"
+community_file = "./LPA_5_karate_community.txt"
+#community_file = "./InfoMap_karate_community.txt"
 
 # parse file
 # Open file     
