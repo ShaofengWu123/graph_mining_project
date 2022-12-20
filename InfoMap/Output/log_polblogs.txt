@@ -1,0 +1,39 @@
+22/12/20 01:21:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/12/20 01:21:52 INFO SparkContext: Running Spark version 3.3.1
+22/12/20 01:21:52 INFO ResourceUtils: ==============================================================
+22/12/20 01:21:52 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/12/20 01:21:52 INFO ResourceUtils: ==============================================================
+22/12/20 01:21:52 INFO SparkContext: Submitted application: InfoMap
+22/12/20 01:21:53 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/12/20 01:21:53 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+22/12/20 01:21:53 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/12/20 01:21:53 INFO SecurityManager: Changing view acls to: IcyLI
+22/12/20 01:21:53 INFO SecurityManager: Changing modify acls to: IcyLI
+22/12/20 01:21:53 INFO SecurityManager: Changing view acls groups to: 
+22/12/20 01:21:53 INFO SecurityManager: Changing modify acls groups to: 
+22/12/20 01:21:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(IcyLI); groups with view permissions: Set(); users  with modify permissions: Set(IcyLI); groups with modify permissions: Set()
+22/12/20 01:21:53 INFO Utils: Successfully started service 'sparkDriver' on port 44401.
+22/12/20 01:21:53 INFO SparkEnv: Registering MapOutputTracker
+22/12/20 01:21:53 INFO SparkEnv: Registering BlockManagerMaster
+22/12/20 01:21:53 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/12/20 01:21:53 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/12/20 01:21:53 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/12/20 01:21:53 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-814047a1-754c-405e-9fbc-2ef41c9cfc61
+22/12/20 01:21:53 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/12/20 01:21:53 INFO SparkEnv: Registering OutputCommitCoordinator
+22/12/20 01:21:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/12/20 01:21:53 INFO SparkContext: Added JAR file:/users/IcyLI/graph_mining_project/InfoMap/target/scala-2.12/infomap-test_2.12-1.1.1.jar at spark://clnode101.clemson.cloudlab.us:44401/jars/infomap-test_2.12-1.1.1.jar with timestamp 1671524512937
+22/12/20 01:21:53 INFO Executor: Starting executor ID driver on host clnode101.clemson.cloudlab.us
+22/12/20 01:21:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+22/12/20 01:21:54 INFO Executor: Fetching spark://clnode101.clemson.cloudlab.us:44401/jars/infomap-test_2.12-1.1.1.jar with timestamp 1671524512937
+22/12/20 01:21:54 INFO TransportClientFactory: Successfully created connection to clnode101.clemson.cloudlab.us/130.127.133.110:44401 after 34 ms (0 ms spent in bootstraps)
+22/12/20 01:21:54 INFO Utils: Fetching spark://clnode101.clemson.cloudlab.us:44401/jars/infomap-test_2.12-1.1.1.jar to /tmp/spark-58fea438-a835-456a-bac2-538881246f3f/userFiles-487d6d96-e295-47c0-aa05-f12990daae3a/fetchFileTemp3300212142505779914.tmp
+22/12/20 01:21:54 INFO Executor: Adding file:/tmp/spark-58fea438-a835-456a-bac2-538881246f3f/userFiles-487d6d96-e295-47c0-aa05-f12990daae3a/infomap-test_2.12-1.1.1.jar to class loader
+22/12/20 01:21:54 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40793.
+22/12/20 01:21:54 INFO NettyBlockTransferService: Server created on clnode101.clemson.cloudlab.us:40793
+22/12/20 01:21:54 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/12/20 01:21:54 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40793, None)
+22/12/20 01:21:54 INFO BlockManagerMasterEndpoint: Registering block manager clnode101.clemson.cloudlab.us:40793 with 434.4 MiB RAM, BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40793, None)
+22/12/20 01:21:54 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40793, None)
+22/12/20 01:21:54 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40793, None)
+Running time: 223.657483338 s
