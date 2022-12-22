@@ -28,7 +28,7 @@ class Graph:
             for u in c:
                 u_neighbors = set(nx.all_neighbors(self.G, u))
                 degrees += len(u_neighbors)
-                print(u_neighbors)
+                #print(u_neighbors)
                 for nbr in u_neighbors:
                     if nbr in c:
                         inter_edges += 1
@@ -43,13 +43,19 @@ class Graph:
             Q_value += cq
         return Q_value
 
-node_number = 34
+#node_number = 34
+node_number = 1490
 nodes = range(1,node_number,1)
 #print(nodes)
 
 edges_file = "./karate_edges.txt"
-community_file = "./LPA_5_karate_community.txt"
+edges_file = "./polblogs_edges.txt"
+#community_file = "./LPA_5_karate_community.txt"
+#community_file = "./LPA_10_karate_community.txt"
 #community_file = "./InfoMap_karate_community.txt"
+#community_file = "./LPA_5_polblogs_community.txt"
+community_file = "./LPA_10_polblogs_community.txt"
+#community_file = "./InfoMap_polblogs_community.txt"
 
 # parse file
 # Open file     
