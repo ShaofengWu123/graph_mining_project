@@ -44,18 +44,24 @@ class Graph:
         return Q_value
 
 #node_number = 34
-node_number = 1490
+#node_number = 1490
+node_number = 317080
 nodes = range(1,node_number,1)
 #print(nodes)
 
-edges_file = "./karate_edges.txt"
-edges_file = "./polblogs_edges.txt"
+#edges_file = "./karate_edges.txt"
+#edges_file = "./polblogs_edges.txt"
+edges_file = "./dblp_LPA_edges.txt"
+#edges_file = "./dblp_InfoMap_edges.txt"
 #community_file = "./LPA_5_karate_community.txt"
 #community_file = "./LPA_10_karate_community.txt"
 #community_file = "./InfoMap_karate_community.txt"
 #community_file = "./LPA_5_polblogs_community.txt"
-community_file = "./LPA_10_polblogs_community.txt"
+#community_file = "./LPA_10_polblogs_community.txt"
 #community_file = "./InfoMap_polblogs_community.txt"
+#community_file = "./LPA_5_dblp_community.txt"
+community_file = "./LPA_10_dblp_community.txt"
+#community_file = "./InfoMap_dblp_community.txt"
 
 # parse file
 # Open file     
