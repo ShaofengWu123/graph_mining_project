@@ -10,15 +10,15 @@ with open(r"./karate_edges.txt", "r") as f:
         lines[0] = int(lines[0])
         lines[1] = int(lines[1])
         edges.append(lines)
-print(edges)
+#print(edges)
 
 result = []
 # parse result
-with open(r"./LPA_5_karate_community.txt", "r") as f:
+with open(r"./InfoMap_karate_community.txt", "r") as f:
     all_data = f.readlines()
     for lines in all_data: 
         lines = lines.split()
-        print(lines)
+        #print(lines)
         lines[0] = int(lines[0])
         lines[1] = int(lines[1])
         result.append(lines)
