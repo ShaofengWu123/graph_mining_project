@@ -78,13 +78,7 @@ class InfoMap extends InfoMap_Utils with Serializable
   : ( Graph, Partition ) = {
     //logFile.write(s"Using InfoMap algorithm\n",false)
     @scala.annotation.tailrec
-    def recursiveMerge(
-      loop: Int,
-      qi_sum: Double,
-      graph: Graph,
-      part: Partition,
-      mergeList: RDD[((Long,Long),Merge)]
-    ): ( Graph, Partition ) = {
+    def merge_recur(loop: Int,qsum: Double,graph: Graph,part: Partition,mergeList: RDD[((Long,Long),Merge)]): ( Graph, Partition ) = {
 
       trim( loop, graph, part, mergeList )
 
@@ -103,15 +97,14 @@ class InfoMap extends InfoMap_Utils with Serializable
       //   +s" with code length reduction ${merge._2.dL}\n",
       // false )
 
-      val new_qi_sum = qsum_calculate( part, merge, qi_sum )
-      val newPart = part_calculate( part, merge )
-      val newGraph = graph_calculate( graph, merge )
-      val newMergeList = mergelist_update(
-        merge, mergeList, newPart, new_qi_sum )
-      recursiveMerge( loop+1, new_qi_sum, newGraph, newPart, newMergeList )
+      val new_qsum = qsum_calculate( part, merge, qsum)
+      val new_part = part_calculate( part, merge)
+      val new_graph = graph_calculate( graph, merge)
+      val new_mergel = mergelist_update(merge, mergeList, new_part, new_qsum)
+      merge_recur( loop+1, new_qsum, new_graph, new_part, new_mergel )
     }
 
-    def mergel_gen( part: Partition, qi_sum: Double ) = {
+    def mergel_gen( part: Partition, qsum: Double ) = {
       // merges are  nondirectional edges
       part.edges.map {
         case (from,(to,weight)) =>
@@ -135,7 +128,7 @@ class InfoMap extends InfoMap_Utils with Serializable
           n1,n2,p1,p2,w1,w2,w1221,q1,q2,
           // calculate dL
           InfoMap_Utils.detltaL_calculate(
-            part, n1,n2,p1,p2, w1+w2-w1221, qi_sum,q1,q2 ))
+            part, n1,n2,p1,p2, w1+w2-w1221, qsum,q1,q2 ))
         )
       }
     }
@@ -206,7 +199,7 @@ class InfoMap extends InfoMap_Utils with Serializable
       merge: ((Long,Long),Merge),
       mergeList: RDD[((Long,Long),Merge)],
       part: Partition,
-      qi_sum: Double
+      qsum: Double
     ) = {
       // grab new modular properties
       val merge1 = merge._1._1
@@ -256,7 +249,7 @@ class InfoMap extends InfoMap_Utils with Serializable
           (m1,m2),
           Merge(n1,n2,p1,p2,w1,w2,w1221,q1,q2,
               InfoMap_Utils.detltaL_calculate(part,
-                n1,n2,p1,p2,w1+w2-w1221,qi_sum,q1,q2))
+                n1,n2,p1,p2,w1+w2-w1221,qsum,q1,q2))
         )
       }
     }
@@ -316,7 +309,7 @@ class InfoMap extends InfoMap_Utils with Serializable
     }
 
     def qsum_calculate(
-      part: Partition, merge: ((Long,Long),Merge), qi_sum: Double )
+      part: Partition, merge: ((Long,Long),Merge), qsum: Double )
     = {
       val n12 = merge._2.n1 +merge._2.n2
       val p12 = merge._2.p1 +merge._2.p2
@@ -325,15 +318,15 @@ class InfoMap extends InfoMap_Utils with Serializable
         part.node_num, n12, p12, part.tele, w12 )
       val q1 = merge._2.q1
       val q2 = merge._2.q2
-      qi_sum +q12 -q1 -q2
+      qsum +q12 -q1 -q2
     }
 
-    val qi_sum = part.vertices.map {
+    val qsum = part.vertices.map {
       case (_,(_,_,_,q)) => q
     }.sum
-    val edgeList = mergel_gen( part, qi_sum )
+    val edgeList = mergel_gen( part, qsum )
 
-    recursiveMerge( 0, qi_sum, graph, part, edgeList )
+    merge_recur( 0, qsum, graph, part, edgeList )
   }
 }
 
@@ -629,9 +622,7 @@ object PajekReader
 {
   def apply( sc: SparkContext, filename: String, logFile: LogFile ): Graph = {
     try {
-      // graph elements stored as local list
-      // to be converted to DataFrame and stored in GrapheFrame
-      // after file reading
+
       var vertices = new ListBuffer[(Long,(String,Long))]()
       var edges = new ListBuffer[((Long,Long),Double)]()
 
@@ -642,15 +633,8 @@ object PajekReader
       val edgeRegex1 = """[ \t]*?([0-9]+)[ \t]+([0-9]+)[ \t]*""".r
       val edgeRegex2 = """[ \t]*?([0-9]+)[ \t]+([0-9]+)[ \t]+([0-9.eE\-\+]+).*""".r
 
-      // store sectioning of file
-      // defaults as "__begin"
-      // to give error if the first line in file is not a section declare
       var section: String = "__begin"
 
-      // the number of vertices
-      // important since Pajek net format allows nodes to be implicitly declared
-      // e.g. when the node number is 6 and only node 1,2,3 are specified,
-      // nodes 4,5,6 are still assumed to exist with node name = node index
       var nodeNumber: Long = -1
 
       var lineNumber = 1 // line number in file, used when printing file error
@@ -660,14 +644,6 @@ object PajekReader
           && line.charAt(0) != '%' // skip comments
         )
       ) {
-  /***************************************************************************
-   * first, check if line begins with '*'
-   * which indicates a new section
-   * if it is a new section
-   * check if it is a vertex section
-   * which must be declared once and only once (otherwise throw error)
-   * and read in nodeNumber
-   ***************************************************************************/
 
         val newSection = line match {
           // line is section declarator, modify section
@@ -707,9 +683,6 @@ object PajekReader
           case _ => section
         }
 
-  /***************************************************************************
-   * Read vertex information
-   ***************************************************************************/
         if( section == "vertices" ) {
           val newVertex = line match {
             case vertexRegex( idx, name ) =>
@@ -796,16 +769,8 @@ object PajekReader
       if( nodeNumber == -1 )
         throw new Exception("There must be one and only one vertices section")
 
-  /***************************************************************************
-   * log progress
-   ***************************************************************************/
       logFile.write("Finished reading from disk; parallelizing...\n",false)
 
-  /***************************************************************************
-   * check there vertices are unique
-   * if vertices are not unique, throw error
-   * if a vertex is missing, put in default name
-   ***************************************************************************/
       val verticesRDD: RDD[(Long,(String,Long))] = {
         // initiate array
         val verticesArray = new Array[(Long,(String,Long))](nodeNumber.toInt)
@@ -820,9 +785,7 @@ object PajekReader
             )
           verticesArray( idx.toInt-1 ) = ( idx, (name,module) )
         }
-        // Pajek file format allows unspecified nodes
-        // e.g. when the node number is 6 and only node 1,2,3 are specified,
-        // nodes 4,5,6 are still assumed to exist with node name = node index
+
         for( idx <- 1 to nodeNumber.toInt )
           if( verticesArray( idx-1 )._1 == -1 )
             verticesArray( idx-1 ) = ( idx, (idx.toString,idx) )
@@ -831,9 +794,6 @@ object PajekReader
       }
 	  verticesRDD.cache
 
-  /***************************************************************************
-   * parallelize edges, aggregate edges with the same vertices
-   ***************************************************************************/
 
       val edgesRDD: RDD[(Long,(Long,Double))] = sc.parallelize(edges)
       .reduceByKey(_+_)
@@ -842,9 +802,6 @@ object PajekReader
       }
 	  edgesRDD.cache
 
-  /***************************************************************************
-   * return Graph
-   ***************************************************************************/
 
       Graph( verticesRDD, edgesRDD )
     }
