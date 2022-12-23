@@ -1,0 +1,1710 @@
+22/12/23 01:49:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/12/23 01:49:54 INFO SparkContext: Running Spark version 3.3.1
+22/12/23 01:49:54 INFO ResourceUtils: ==============================================================
+22/12/23 01:49:54 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/12/23 01:49:54 INFO ResourceUtils: ==============================================================
+22/12/23 01:49:54 INFO SparkContext: Submitted application: LPA
+22/12/23 01:49:54 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/12/23 01:49:54 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+22/12/23 01:49:54 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/12/23 01:49:54 INFO SecurityManager: Changing view acls to: IcyLI
+22/12/23 01:49:54 INFO SecurityManager: Changing modify acls to: IcyLI
+22/12/23 01:49:54 INFO SecurityManager: Changing view acls groups to: 
+22/12/23 01:49:54 INFO SecurityManager: Changing modify acls groups to: 
+22/12/23 01:49:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(IcyLI); groups with view permissions: Set(); users  with modify permissions: Set(IcyLI); groups with modify permissions: Set()
+22/12/23 01:49:54 INFO Utils: Successfully started service 'sparkDriver' on port 37931.
+22/12/23 01:49:54 INFO SparkEnv: Registering MapOutputTracker
+22/12/23 01:49:54 INFO SparkEnv: Registering BlockManagerMaster
+22/12/23 01:49:54 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/12/23 01:49:54 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/12/23 01:49:54 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/12/23 01:49:54 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f5495857-b17e-44e0-8df5-d7b27dfcdd1e
+22/12/23 01:49:54 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/12/23 01:49:54 INFO SparkEnv: Registering OutputCommitCoordinator
+22/12/23 01:49:55 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/12/23 01:49:55 INFO SparkContext: Added JAR file:/users/IcyLI/graph_mining_project/LPA/target/scala-2.12/lpa-test_2.12-1.0.jar at spark://clnode101.clemson.cloudlab.us:37931/jars/lpa-test_2.12-1.0.jar with timestamp 1671785394272
+22/12/23 01:49:55 INFO Executor: Starting executor ID driver on host clnode101.clemson.cloudlab.us
+22/12/23 01:49:55 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+22/12/23 01:49:55 INFO Executor: Fetching spark://clnode101.clemson.cloudlab.us:37931/jars/lpa-test_2.12-1.0.jar with timestamp 1671785394272
+22/12/23 01:49:55 INFO TransportClientFactory: Successfully created connection to clnode101.clemson.cloudlab.us/130.127.133.110:37931 after 35 ms (0 ms spent in bootstraps)
+22/12/23 01:49:55 INFO Utils: Fetching spark://clnode101.clemson.cloudlab.us:37931/jars/lpa-test_2.12-1.0.jar to /tmp/spark-08907f4a-66d1-46fa-9436-a9cdd194c18c/userFiles-dc4f12e0-e445-4318-9ab2-2be740d8ee3f/fetchFileTemp15030194811820056596.tmp
+22/12/23 01:49:55 INFO Executor: Adding file:/tmp/spark-08907f4a-66d1-46fa-9436-a9cdd194c18c/userFiles-dc4f12e0-e445-4318-9ab2-2be740d8ee3f/lpa-test_2.12-1.0.jar to class loader
+22/12/23 01:49:55 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40785.
+22/12/23 01:49:55 INFO NettyBlockTransferService: Server created on clnode101.clemson.cloudlab.us:40785
+22/12/23 01:49:55 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/12/23 01:49:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40785, None)
+22/12/23 01:49:55 INFO BlockManagerMasterEndpoint: Registering block manager clnode101.clemson.cloudlab.us:40785 with 434.4 MiB RAM, BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40785, None)
+22/12/23 01:49:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40785, None)
+22/12/23 01:49:55 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, clnode101.clemson.cloudlab.us, 40785, None)
+22/12/23 01:49:55 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.5 KiB, free 434.2 MiB)
+22/12/23 01:49:56 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.5 KiB, free 434.2 MiB)
+22/12/23 01:49:56 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 32.5 KiB, free: 434.4 MiB)
+22/12/23 01:49:56 INFO SparkContext: Created broadcast 0 from textFile at GraphLoader.scala:75
+22/12/23 01:49:56 INFO FileInputFormat: Total input files to process : 1
+22/12/23 01:49:56 INFO SparkContext: Starting job: count at GraphLoader.scala:96
+22/12/23 01:49:56 INFO DAGScheduler: Got job 0 (count at GraphLoader.scala:96) with 2 output partitions
+22/12/23 01:49:56 INFO DAGScheduler: Final stage: ResultStage 0 (count at GraphLoader.scala:96)
+22/12/23 01:49:56 INFO DAGScheduler: Parents of final stage: List()
+22/12/23 01:49:56 INFO DAGScheduler: Missing parents: List()
+22/12/23 01:49:56 INFO DAGScheduler: Submitting ResultStage 0 (GraphLoader.edgeListFile - edges (data/polblogs/polblogs.txt) MapPartitionsRDD[2] at mapPartitionsWithIndex at GraphLoader.scala:77), which has no missing parents
+22/12/23 01:49:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 5.5 KiB, free 434.1 MiB)
+22/12/23 01:49:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.0 KiB, free 434.1 MiB)
+22/12/23 01:49:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 3.0 KiB, free: 434.4 MiB)
+22/12/23 01:49:56 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:56 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (GraphLoader.edgeListFile - edges (data/polblogs/polblogs.txt) MapPartitionsRDD[2] at mapPartitionsWithIndex at GraphLoader.scala:77) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:56 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+22/12/23 01:49:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4538 bytes) taskResourceAssignments Map()
+22/12/23 01:49:56 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4538 bytes) taskResourceAssignments Map()
+22/12/23 01:49:56 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/12/23 01:49:56 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+22/12/23 01:49:56 INFO HadoopRDD: Input split: file:/users/IcyLI/graph_mining_project/LPA/data/polblogs/polblogs.txt:0+81226
+22/12/23 01:49:56 INFO HadoopRDD: Input split: file:/users/IcyLI/graph_mining_project/LPA/data/polblogs/polblogs.txt:81226+81227
+22/12/23 01:49:56 INFO MemoryStore: Block rdd_2_1 stored as values in memory (estimated size 166.1 KiB, free 433.8 MiB)
+22/12/23 01:49:56 INFO MemoryStore: Block rdd_2_0 stored as values in memory (estimated size 163.2 KiB, free 433.8 MiB)
+22/12/23 01:49:56 INFO BlockManagerInfo: Added rdd_2_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 166.1 KiB, free: 434.2 MiB)
+22/12/23 01:49:56 INFO BlockManagerInfo: Added rdd_2_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 163.2 KiB, free: 434.0 MiB)
+22/12/23 01:49:56 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1012 bytes result sent to driver
+22/12/23 01:49:56 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1012 bytes result sent to driver
+22/12/23 01:49:56 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 398 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:56 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 416 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:56 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+22/12/23 01:49:56 INFO DAGScheduler: ResultStage 0 (count at GraphLoader.scala:96) finished in 0.542 s
+22/12/23 01:49:56 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/23 01:49:56 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+22/12/23 01:49:56 INFO DAGScheduler: Job 0 finished: count at GraphLoader.scala:96, took 0.597442 s
+22/12/23 01:49:56 INFO GraphLoader: It took 1196 ms to load the edges
+22/12/23 01:49:56 INFO SparkContext: Starting job: isEmpty at Pregel.scala:140
+22/12/23 01:49:56 INFO DAGScheduler: Registering RDD 5 (mapPartitions at VertexRDD.scala:356) as input to shuffle 3
+22/12/23 01:49:56 INFO DAGScheduler: Registering RDD 23 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 1
+22/12/23 01:49:56 INFO DAGScheduler: Registering RDD 19 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 0
+22/12/23 01:49:56 INFO DAGScheduler: Registering RDD 27 (mapPartitions at GraphImpl.scala:207) as input to shuffle 2
+22/12/23 01:49:56 INFO DAGScheduler: Got job 1 (isEmpty at Pregel.scala:140) with 1 output partitions
+22/12/23 01:49:56 INFO DAGScheduler: Final stage: ResultStage 5 (isEmpty at Pregel.scala:140)
+22/12/23 01:49:56 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1, ShuffleMapStage 4)
+22/12/23 01:49:56 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1, ShuffleMapStage 4)
+22/12/23 01:49:56 INFO DAGScheduler: Submitting ShuffleMapStage 1 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[5] at mapPartitions at VertexRDD.scala:356), which has no missing parents
+22/12/23 01:49:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.0 KiB, free 433.8 MiB)
+22/12/23 01:49:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.9 KiB, free 433.8 MiB)
+22/12/23 01:49:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 3.9 KiB, free: 434.0 MiB)
+22/12/23 01:49:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (VertexRDD.createRoutingTables - vid2pid (aggregation) MapPartitionsRDD[5] at mapPartitions at VertexRDD.scala:356) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+22/12/23 01:49:56 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4527 bytes) taskResourceAssignments Map()
+22/12/23 01:49:56 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4527 bytes) taskResourceAssignments Map()
+22/12/23 01:49:56 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+22/12/23 01:49:56 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_2_0 locally
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_2_1 locally
+22/12/23 01:49:57 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 1187 bytes result sent to driver
+22/12/23 01:49:57 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 1187 bytes result sent to driver
+22/12/23 01:49:57 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 416 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:57 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 421 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:57 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+22/12/23 01:49:57 INFO DAGScheduler: ShuffleMapStage 1 (mapPartitions at VertexRDD.scala:356) finished in 0.457 s
+22/12/23 01:49:57 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:57 INFO DAGScheduler: running: Set()
+22/12/23 01:49:57 INFO DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 2, ShuffleMapStage 3, ShuffleMapStage 4)
+22/12/23 01:49:57 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:57 INFO DAGScheduler: Submitting ShuffleMapStage 2 (ReplicatedVertexView.upgrade(true, true) - shippedVerts true true (broadcast) MapPartitionsRDD[23] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/23 01:49:57 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 8.6 KiB, free 433.8 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.3 KiB, free 433.8 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 4.3 KiB, free: 434.0 MiB)
+22/12/23 01:49:57 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:57 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (ReplicatedVertexView.upgrade(true, true) - shippedVerts true true (broadcast) MapPartitionsRDD[23] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:57 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks resource profile 0
+22/12/23 01:49:57 INFO DAGScheduler: Submitting ShuffleMapStage 3 (ReplicatedVertexView.updateVertices - shippedVerts false false (broadcast) MapPartitionsRDD[19] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/23 01:49:57 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4) (clnode101.clemson.cloudlab.us, executor driver, partition 0, NODE_LOCAL, 4260 bytes) taskResourceAssignments Map()
+22/12/23 01:49:57 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5) (clnode101.clemson.cloudlab.us, executor driver, partition 1, NODE_LOCAL, 4260 bytes) taskResourceAssignments Map()
+22/12/23 01:49:57 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+22/12/23 01:49:57 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+22/12/23 01:49:57 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 9.2 KiB, free 433.8 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.5 KiB, free 433.8 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 4.5 KiB, free: 434.0 MiB)
+22/12/23 01:49:57 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:57 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 3 (ReplicatedVertexView.updateVertices - shippedVerts false false (broadcast) MapPartitionsRDD[19] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:57 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks resource profile 0
+22/12/23 01:49:57 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6) (clnode101.clemson.cloudlab.us, executor driver, partition 0, NODE_LOCAL, 4523 bytes) taskResourceAssignments Map()
+22/12/23 01:49:57 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7) (clnode101.clemson.cloudlab.us, executor driver, partition 1, NODE_LOCAL, 4523 bytes) taskResourceAssignments Map()
+22/12/23 01:49:57 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+22/12/23 01:49:57 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Getting 2 (4.8 KiB) non-empty blocks including 2 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Getting 2 (5.1 KiB) non-empty blocks including 2 (5.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 14 ms
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_11_0 stored as values in memory (estimated size 24.5 KiB, free 433.7 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_11_1 stored as values in memory (estimated size 25.0 KiB, free 433.7 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_11_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 24.5 KiB, free: 434.0 MiB)
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_11_0 locally
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_11_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 25.0 KiB, free: 434.0 MiB)
+22/12/23 01:49:57 WARN BlockManager: Block rdd_11_1 already exists on this machine; not re-adding it
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_15_0 stored as values in memory (estimated size 24.5 KiB, free 433.7 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_15_1 stored as values in memory (estimated size 25.0 KiB, free 433.7 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_15_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 24.5 KiB, free: 434.0 MiB)
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_15_0 locally
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_15_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 25.0 KiB, free: 433.9 MiB)
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_15_1 locally
+22/12/23 01:49:57 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 1144 bytes result sent to driver
+22/12/23 01:49:57 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 1144 bytes result sent to driver
+22/12/23 01:49:57 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 192 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:57 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 191 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:57 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+22/12/23 01:49:57 INFO DAGScheduler: ShuffleMapStage 2 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.214 s
+22/12/23 01:49:57 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:57 INFO DAGScheduler: running: Set(ShuffleMapStage 3)
+22/12/23 01:49:57 INFO Executor: 2 block locks were not released by task 0.0 in stage 3.0 (TID 6)
+[rdd_11_0, rdd_15_0]
+22/12/23 01:49:57 INFO DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 4)
+22/12/23 01:49:57 INFO Executor: 2 block locks were not released by task 1.0 in stage 3.0 (TID 7)
+[rdd_15_1, rdd_11_1]
+22/12/23 01:49:57 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:57 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 1445 bytes result sent to driver
+22/12/23 01:49:57 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 1445 bytes result sent to driver
+22/12/23 01:49:57 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 177 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:57 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 166 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:57 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+22/12/23 01:49:57 INFO DAGScheduler: ShuffleMapStage 3 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.199 s
+22/12/23 01:49:57 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:57 INFO DAGScheduler: running: Set()
+22/12/23 01:49:57 INFO DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 4)
+22/12/23 01:49:57 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:57 INFO DAGScheduler: Submitting ShuffleMapStage 4 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[27] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/23 01:49:57 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 10.1 KiB, free 433.7 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 433.7 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 5.0 KiB, free: 433.9 MiB)
+22/12/23 01:49:57 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:57 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[27] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:57 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks resource profile 0
+22/12/23 01:49:57 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 8) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4906 bytes) taskResourceAssignments Map()
+22/12/23 01:49:57 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 9) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4906 bytes) taskResourceAssignments Map()
+22/12/23 01:49:57 INFO Executor: Running task 0.0 in stage 4.0 (TID 8)
+22/12/23 01:49:57 INFO Executor: Running task 1.0 in stage 4.0 (TID 9)
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_2_1 locally
+22/12/23 01:49:57 INFO BlockManager: Found block rdd_2_0 locally
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_13_1 stored as values in memory (estimated size 170.1 KiB, free 433.5 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_13_0 stored as values in memory (estimated size 167.1 KiB, free 433.3 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_13_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 170.1 KiB, free: 433.8 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_13_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 167.1 KiB, free: 433.6 MiB)
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Getting 2 (552.0 B) non-empty blocks including 2 (552.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Getting 2 (502.0 B) non-empty blocks including 2 (502.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_21_1 stored as values in memory (estimated size 170.1 KiB, free 433.0 MiB)
+22/12/23 01:49:57 INFO MemoryStore: Block rdd_21_0 stored as values in memory (estimated size 167.1 KiB, free 433.0 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_21_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 170.1 KiB, free: 433.4 MiB)
+22/12/23 01:49:57 INFO BlockManagerInfo: Added rdd_21_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 167.1 KiB, free: 433.3 MiB)
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Getting 2 (4.8 KiB) non-empty blocks including 2 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Getting 2 (4.8 KiB) non-empty blocks including 2 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_2_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 3.9 KiB, free: 433.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_4_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 4.5 KiB, free: 433.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_3_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 4.3 KiB, free: 433.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_1_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 3.0 KiB, free: 433.3 MiB)
+22/12/23 01:49:58 INFO Executor: 1 block locks were not released by task 0.0 in stage 4.0 (TID 8)
+[rdd_2_0]
+22/12/23 01:49:58 INFO Executor: Finished task 0.0 in stage 4.0 (TID 8). 1488 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 8) in 676 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:58 INFO Executor: 1 block locks were not released by task 1.0 in stage 4.0 (TID 9)
+[rdd_2_1]
+22/12/23 01:49:58 INFO Executor: Finished task 1.0 in stage 4.0 (TID 9). 1488 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 9) in 681 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+22/12/23 01:49:58 INFO DAGScheduler: ShuffleMapStage 4 (mapPartitions at GraphImpl.scala:207) finished in 0.696 s
+22/12/23 01:49:58 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:58 INFO DAGScheduler: running: Set()
+22/12/23 01:49:58 INFO DAGScheduler: waiting: Set(ResultStage 5)
+22/12/23 01:49:58 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:58 INFO DAGScheduler: Submitting ResultStage 5 (VertexRDDImpl[30] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 9.7 KiB, free 433.1 MiB)
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.7 KiB, free 433.0 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 4.7 KiB, free: 433.3 MiB)
+22/12/23 01:49:58 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (VertexRDDImpl[30] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 10) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4543 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO Executor: Running task 0.0 in stage 5.0 (TID 10)
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_15_0 locally
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (88.7 KiB) non-empty blocks including 2 (88.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO MemoryStore: Block rdd_29_0 stored as values in memory (estimated size 727.7 KiB, free 432.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added rdd_29_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 727.7 KiB, free: 432.6 MiB)
+22/12/23 01:49:58 INFO Executor: 1 block locks were not released by task 0.0 in stage 5.0 (TID 10)
+[rdd_29_0]
+22/12/23 01:49:58 INFO Executor: Finished task 0.0 in stage 5.0 (TID 10). 4300 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 10) in 121 ms on clnode101.clemson.cloudlab.us (executor driver) (1/1)
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+22/12/23 01:49:58 INFO DAGScheduler: ResultStage 5 (isEmpty at Pregel.scala:140) finished in 0.133 s
+22/12/23 01:49:58 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+22/12/23 01:49:58 INFO DAGScheduler: Job 1 finished: isEmpty at Pregel.scala:140, took 1.560451 s
+22/12/23 01:49:58 INFO SparkContext: Starting job: isEmpty at Pregel.scala:161
+22/12/23 01:49:58 INFO DAGScheduler: Registering RDD 35 (mapPartitions at VertexRDDImpl.scala:247) as input to shuffle 4
+22/12/23 01:49:58 INFO DAGScheduler: Registering RDD 39 (mapPartitions at VertexRDDImpl.scala:251) as input to shuffle 5
+22/12/23 01:49:58 INFO DAGScheduler: Registering RDD 43 (mapPartitions at GraphImpl.scala:207) as input to shuffle 6
+22/12/23 01:49:58 INFO DAGScheduler: Got job 2 (isEmpty at Pregel.scala:161) with 1 output partitions
+22/12/23 01:49:58 INFO DAGScheduler: Final stage: ResultStage 13 (isEmpty at Pregel.scala:161)
+22/12/23 01:49:58 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 6)
+22/12/23 01:49:58 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 12)
+22/12/23 01:49:58 INFO DAGScheduler: Submitting ShuffleMapStage 10 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[35] at mapPartitions at VertexRDDImpl.scala:247), which has no missing parents
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 10.6 KiB, free 432.3 MiB)
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 432.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 5.0 KiB, free: 432.6 MiB)
+22/12/23 01:49:58 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:58 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (ReplicatedVertexView.updateVertices - shippedVerts true true (broadcast) MapPartitionsRDD[35] at mapPartitions at VertexRDDImpl.scala:247) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Adding task set 10.0 with 2 tasks resource profile 0
+22/12/23 01:49:58 INFO DAGScheduler: Submitting ShuffleMapStage 11 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[39] at mapPartitions at VertexRDDImpl.scala:251), which has no missing parents
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 11) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4596 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 12) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4596 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 9.5 KiB, free 432.3 MiB)
+22/12/23 01:49:58 INFO Executor: Running task 1.0 in stage 10.0 (TID 12)
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.7 KiB, free 432.3 MiB)
+22/12/23 01:49:58 INFO Executor: Running task 0.0 in stage 10.0 (TID 11)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 4.7 KiB, free: 432.6 MiB)
+22/12/23 01:49:58 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:58 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (ReplicatedVertexView.withActiveSet - shippedActives (broadcast) MapPartitionsRDD[39] at mapPartitions at VertexRDDImpl.scala:251) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Adding task set 11.0 with 2 tasks resource profile 0
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 13) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4532 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 14) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4532 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO Executor: Running task 1.0 in stage 11.0 (TID 14)
+22/12/23 01:49:58 INFO Executor: Running task 0.0 in stage 11.0 (TID 13)
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_15_1 locally
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_29_0 locally
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (107.3 KiB) non-empty blocks including 2 (107.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_15_0 locally
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_15_1 locally
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_15_1 locally
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_15_0 locally
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_29_0 locally
+22/12/23 01:49:58 INFO Executor: Finished task 0.0 in stage 11.0 (TID 13). 1144 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 13) in 33 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:58 INFO MemoryStore: Block rdd_31_0 stored as values in memory (estimated size 24.5 KiB, free 432.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added rdd_31_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 24.5 KiB, free: 432.5 MiB)
+22/12/23 01:49:58 INFO Executor: 3 block locks were not released by task 0.0 in stage 10.0 (TID 11)
+[rdd_31_0, rdd_29_0, rdd_15_0]
+22/12/23 01:49:58 INFO Executor: Finished task 0.0 in stage 10.0 (TID 11). 1144 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 11) in 50 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:58 INFO MemoryStore: Block rdd_29_1 stored as values in memory (estimated size 1047.2 KiB, free 431.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added rdd_29_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 1047.2 KiB, free: 431.5 MiB)
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_29_1 locally
+22/12/23 01:49:58 INFO MemoryStore: Block rdd_31_1 stored as values in memory (estimated size 25.0 KiB, free 431.2 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added rdd_31_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 25.0 KiB, free: 431.5 MiB)
+22/12/23 01:49:58 INFO Executor: 3 block locks were not released by task 1.0 in stage 10.0 (TID 12)
+[rdd_29_1, rdd_15_1, rdd_31_1]
+22/12/23 01:49:58 INFO Executor: Finished task 1.0 in stage 10.0 (TID 12). 1144 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 12) in 98 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+22/12/23 01:49:58 INFO DAGScheduler: ShuffleMapStage 10 (mapPartitions at VertexRDDImpl.scala:247) finished in 0.110 s
+22/12/23 01:49:58 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:58 INFO Executor: Finished task 1.0 in stage 11.0 (TID 14). 1445 bytes result sent to driver
+22/12/23 01:49:58 INFO DAGScheduler: running: Set(ShuffleMapStage 11)
+22/12/23 01:49:58 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+22/12/23 01:49:58 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 14) in 92 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+22/12/23 01:49:58 INFO DAGScheduler: ShuffleMapStage 11 (mapPartitions at VertexRDDImpl.scala:251) finished in 0.103 s
+22/12/23 01:49:58 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:58 INFO DAGScheduler: running: Set()
+22/12/23 01:49:58 INFO DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+22/12/23 01:49:58 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:58 INFO DAGScheduler: Submitting ShuffleMapStage 12 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[43] at mapPartitions at GraphImpl.scala:207), which has no missing parents
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 11.4 KiB, free 431.2 MiB)
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 5.6 KiB, free 431.2 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 5.6 KiB, free: 431.5 MiB)
+22/12/23 01:49:58 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:58 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (GraphImpl.aggregateMessages - preAgg MapPartitionsRDD[43] at mapPartitions at GraphImpl.scala:207) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Adding task set 12.0 with 2 tasks resource profile 0
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 15) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4988 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 16) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4988 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO Executor: Running task 1.0 in stage 12.0 (TID 16)
+22/12/23 01:49:58 INFO Executor: Running task 0.0 in stage 12.0 (TID 15)
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_21_1 locally
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_21_0 locally
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (4.8 KiB) non-empty blocks including 2 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (4.8 KiB) non-empty blocks including 2 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (7.8 KiB) non-empty blocks including 2 (7.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (8.2 KiB) non-empty blocks including 2 (8.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO MemoryStore: Block rdd_37_0 stored as values in memory (estimated size 167.1 KiB, free 431.1 MiB)
+22/12/23 01:49:58 INFO MemoryStore: Block rdd_37_1 stored as values in memory (estimated size 170.1 KiB, free 430.9 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added rdd_37_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 167.1 KiB, free: 431.3 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added rdd_37_1 in memory on clnode101.clemson.cloudlab.us:40785 (size: 170.1 KiB, free: 431.2 MiB)
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (2.1 KiB) non-empty blocks including 2 (2.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (2.2 KiB) non-empty blocks including 2 (2.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_6_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 4.7 KiB, free: 431.2 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_7_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 5.0 KiB, free: 431.2 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_5_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 5.0 KiB, free: 431.2 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Removed broadcast_8_piece0 on clnode101.clemson.cloudlab.us:40785 in memory (size: 4.7 KiB, free: 431.2 MiB)
+22/12/23 01:49:58 INFO Executor: Finished task 1.0 in stage 12.0 (TID 16). 1488 bytes result sent to driver
+22/12/23 01:49:58 INFO Executor: Finished task 0.0 in stage 12.0 (TID 15). 1488 bytes result sent to driver
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 16) in 292 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:58 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 15) in 294 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+22/12/23 01:49:58 INFO DAGScheduler: ShuffleMapStage 12 (mapPartitions at GraphImpl.scala:207) finished in 0.304 s
+22/12/23 01:49:58 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:58 INFO DAGScheduler: running: Set()
+22/12/23 01:49:58 INFO DAGScheduler: waiting: Set(ResultStage 13)
+22/12/23 01:49:58 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:58 INFO DAGScheduler: Submitting ResultStage 13 (VertexRDDImpl[46] at RDD at VertexRDD.scala:57), which has no missing parents
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 10.8 KiB, free 430.9 MiB)
+22/12/23 01:49:58 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 430.9 MiB)
+22/12/23 01:49:58 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 5.0 KiB, free: 431.2 MiB)
+22/12/23 01:49:58 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (VertexRDDImpl[46] at RDD at VertexRDD.scala:57) (first 15 tasks are for partitions Vector(0))
+22/12/23 01:49:58 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks resource profile 0
+22/12/23 01:49:58 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 17) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4616 bytes) taskResourceAssignments Map()
+22/12/23 01:49:58 INFO Executor: Running task 0.0 in stage 13.0 (TID 17)
+22/12/23 01:49:58 INFO BlockManager: Found block rdd_31_0 locally
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Getting 2 (60.6 KiB) non-empty blocks including 2 (60.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:59 INFO MemoryStore: Block rdd_45_0 stored as values in memory (estimated size 429.9 KiB, free 430.5 MiB)
+22/12/23 01:49:59 INFO BlockManagerInfo: Added rdd_45_0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 429.9 KiB, free: 430.8 MiB)
+22/12/23 01:49:59 INFO Executor: 1 block locks were not released by task 0.0 in stage 13.0 (TID 17)
+[rdd_45_0]
+22/12/23 01:49:59 INFO Executor: Finished task 0.0 in stage 13.0 (TID 17). 2541 bytes result sent to driver
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 17) in 35 ms on clnode101.clemson.cloudlab.us (executor driver) (1/1)
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+22/12/23 01:49:59 INFO DAGScheduler: ResultStage 13 (isEmpty at Pregel.scala:161) finished in 0.044 s
+22/12/23 01:49:59 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 13: Stage finished
+22/12/23 01:49:59 INFO DAGScheduler: Job 2 finished: isEmpty at Pregel.scala:161, took 0.490336 s
+22/12/23 01:49:59 INFO Pregel: Pregel finished iteration 0
+22/12/23 01:49:59 INFO ZippedPartitionsRDD2: Removing RDD 29 from persistence list
+22/12/23 01:49:59 INFO BlockManager: Removing RDD 29
+22/12/23 01:49:59 INFO MapPartitionsRDD: Removing RDD 15 from persistence list
+22/12/23 01:49:59 INFO ZippedPartitionsRDD2: Removing RDD 21 from persistence list
+22/12/23 01:49:59 INFO BlockManager: Removing RDD 15
+22/12/23 01:49:59 INFO ZippedPartitionsRDD2: Removing RDD 29 from persistence list
+22/12/23 01:49:59 INFO BlockManager: Removing RDD 21
+22/12/23 01:49:59 INFO ZippedPartitionsRDD2: Removing RDD 45 from persistence list
+22/12/23 01:49:59 INFO BlockManager: Removing RDD 29
+22/12/23 01:49:59 INFO BlockManager: Removing RDD 45
+Running time: 2.201309841 s
+22/12/23 01:49:59 INFO SparkContext: Starting job: sortBy at lpa.scala:30
+22/12/23 01:49:59 INFO DAGScheduler: Got job 3 (sortBy at lpa.scala:30) with 2 output partitions
+22/12/23 01:49:59 INFO DAGScheduler: Final stage: ResultStage 18 (sortBy at lpa.scala:30)
+22/12/23 01:49:59 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 17, ShuffleMapStage 14)
+22/12/23 01:49:59 INFO DAGScheduler: Missing parents: List()
+22/12/23 01:49:59 INFO DAGScheduler: Submitting ResultStage 18 (MapPartitionsRDD[49] at sortBy at lpa.scala:30), which has no missing parents
+22/12/23 01:49:59 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 11.9 KiB, free 433.0 MiB)
+22/12/23 01:49:59 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 433.0 MiB)
+22/12/23 01:49:59 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 5.5 KiB, free: 433.3 MiB)
+22/12/23 01:49:59 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:59 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 18 (MapPartitionsRDD[49] at sortBy at lpa.scala:30) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Adding task set 18.0 with 2 tasks resource profile 0
+22/12/23 01:49:59 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 18) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4575 bytes) taskResourceAssignments Map()
+22/12/23 01:49:59 INFO TaskSetManager: Starting task 1.0 in stage 18.0 (TID 19) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4575 bytes) taskResourceAssignments Map()
+22/12/23 01:49:59 INFO Executor: Running task 0.0 in stage 18.0 (TID 18)
+22/12/23 01:49:59 INFO Executor: Running task 1.0 in stage 18.0 (TID 19)
+22/12/23 01:49:59 INFO BlockManager: Found block rdd_31_0 locally
+22/12/23 01:49:59 INFO BlockManager: Found block rdd_31_1 locally
+22/12/23 01:49:59 INFO Executor: 1 block locks were not released by task 0.0 in stage 18.0 (TID 18)
+[rdd_31_0]
+22/12/23 01:49:59 INFO Executor: 1 block locks were not released by task 1.0 in stage 18.0 (TID 19)
+[rdd_31_1]
+22/12/23 01:49:59 INFO Executor: Finished task 0.0 in stage 18.0 (TID 18). 1636 bytes result sent to driver
+22/12/23 01:49:59 INFO Executor: Finished task 1.0 in stage 18.0 (TID 19). 1636 bytes result sent to driver
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 18) in 28 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 1.0 in stage 18.0 (TID 19) in 27 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+22/12/23 01:49:59 INFO DAGScheduler: ResultStage 18 (sortBy at lpa.scala:30) finished in 0.037 s
+22/12/23 01:49:59 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 18: Stage finished
+22/12/23 01:49:59 INFO DAGScheduler: Job 3 finished: sortBy at lpa.scala:30, took 0.045512 s
+22/12/23 01:49:59 INFO SparkContext: Starting job: foreach at lpa.scala:30
+22/12/23 01:49:59 INFO DAGScheduler: Registering RDD 47 (sortBy at lpa.scala:30) as input to shuffle 7
+22/12/23 01:49:59 INFO DAGScheduler: Got job 4 (foreach at lpa.scala:30) with 2 output partitions
+22/12/23 01:49:59 INFO DAGScheduler: Final stage: ResultStage 24 (foreach at lpa.scala:30)
+22/12/23 01:49:59 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 23)
+22/12/23 01:49:59 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 23)
+22/12/23 01:49:59 INFO DAGScheduler: Submitting ShuffleMapStage 23 (MapPartitionsRDD[47] at sortBy at lpa.scala:30), which has no missing parents
+22/12/23 01:49:59 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 10.9 KiB, free 433.0 MiB)
+22/12/23 01:49:59 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.2 KiB, free 433.0 MiB)
+22/12/23 01:49:59 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 5.2 KiB, free: 433.3 MiB)
+22/12/23 01:49:59 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:59 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 23 (MapPartitionsRDD[47] at sortBy at lpa.scala:30) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Adding task set 23.0 with 2 tasks resource profile 0
+22/12/23 01:49:59 INFO TaskSetManager: Starting task 0.0 in stage 23.0 (TID 20) (clnode101.clemson.cloudlab.us, executor driver, partition 0, PROCESS_LOCAL, 4564 bytes) taskResourceAssignments Map()
+22/12/23 01:49:59 INFO TaskSetManager: Starting task 1.0 in stage 23.0 (TID 21) (clnode101.clemson.cloudlab.us, executor driver, partition 1, PROCESS_LOCAL, 4564 bytes) taskResourceAssignments Map()
+22/12/23 01:49:59 INFO Executor: Running task 0.0 in stage 23.0 (TID 20)
+22/12/23 01:49:59 INFO Executor: Running task 1.0 in stage 23.0 (TID 21)
+22/12/23 01:49:59 INFO BlockManager: Found block rdd_31_1 locally
+22/12/23 01:49:59 INFO BlockManager: Found block rdd_31_0 locally
+22/12/23 01:49:59 INFO Executor: 1 block locks were not released by task 1.0 in stage 23.0 (TID 21)
+[rdd_31_1]
+22/12/23 01:49:59 INFO Executor: 1 block locks were not released by task 0.0 in stage 23.0 (TID 20)
+[rdd_31_0]
+22/12/23 01:49:59 INFO Executor: Finished task 1.0 in stage 23.0 (TID 21). 1144 bytes result sent to driver
+22/12/23 01:49:59 INFO Executor: Finished task 0.0 in stage 23.0 (TID 20). 1144 bytes result sent to driver
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 1.0 in stage 23.0 (TID 21) in 17 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 0.0 in stage 23.0 (TID 20) in 17 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Removed TaskSet 23.0, whose tasks have all completed, from pool 
+22/12/23 01:49:59 INFO DAGScheduler: ShuffleMapStage 23 (sortBy at lpa.scala:30) finished in 0.028 s
+22/12/23 01:49:59 INFO DAGScheduler: looking for newly runnable stages
+22/12/23 01:49:59 INFO DAGScheduler: running: Set()
+22/12/23 01:49:59 INFO DAGScheduler: waiting: Set(ResultStage 24)
+22/12/23 01:49:59 INFO DAGScheduler: failed: Set()
+22/12/23 01:49:59 INFO DAGScheduler: Submitting ResultStage 24 (MapPartitionsRDD[51] at sortBy at lpa.scala:30), which has no missing parents
+22/12/23 01:49:59 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 5.7 KiB, free 433.0 MiB)
+22/12/23 01:49:59 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 3.1 KiB, free 433.0 MiB)
+22/12/23 01:49:59 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on clnode101.clemson.cloudlab.us:40785 (size: 3.1 KiB, free: 433.3 MiB)
+22/12/23 01:49:59 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1513
+22/12/23 01:49:59 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 24 (MapPartitionsRDD[51] at sortBy at lpa.scala:30) (first 15 tasks are for partitions Vector(0, 1))
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Adding task set 24.0 with 2 tasks resource profile 0
+22/12/23 01:49:59 INFO TaskSetManager: Starting task 0.0 in stage 24.0 (TID 22) (clnode101.clemson.cloudlab.us, executor driver, partition 0, NODE_LOCAL, 4271 bytes) taskResourceAssignments Map()
+22/12/23 01:49:59 INFO TaskSetManager: Starting task 1.0 in stage 24.0 (TID 23) (clnode101.clemson.cloudlab.us, executor driver, partition 1, NODE_LOCAL, 4271 bytes) taskResourceAssignments Map()
+22/12/23 01:49:59 INFO Executor: Running task 0.0 in stage 24.0 (TID 22)
+22/12/23 01:49:59 INFO Executor: Running task 1.0 in stage 24.0 (TID 23)
+22/12/23 01:49:59 INFO ShuffleBlockFetcherIterator: Getting 2 (10.4 KiB) non-empty blocks including 2 (10.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:59 INFO ShuffleBlockFetcherIterator: Getting 2 (10.4 KiB) non-empty blocks including 2 (10.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+22/12/23 01:49:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+22/12/23 01:49:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+1280 767
+572 2
+1378 768
+52 2
+136 773
+238 2
+602 773
+720 5
+1446 773
+722 8
+897 773
+278 8
+1141 773
+596 8
+1455 774
+267 8
+1344 775
+567 8
+1005 775
+440 13
+777 775
+119 14
+838 777
+1089 21
+919 777
+24 23
+518 779
+402 23
+918 781
+340 23
+1175 781
+222 23
+1331 782
+1380 23
+991 786
+610 23
+1407 791
+511 23
+1168 792
+357 23
+1176 792
+575 23
+1083 792
+155 23
+1305 793
+434 24
+1213 793
+154 24
+327 798
+23 24
+1490 802
+55 24
+1025 802
+107 24
+914 805
+450 29
+1267 805
+310 29
+998 810
+351 29
+1023 810
+699 29
+859 810
+409 29
+1439 810
+541 31
+1461 810
+598 35
+864 813
+377 38
+744 818
+76 40
+794 820
+718 40
+821 820
+625 41
+820 821
+717 45
+1266 826
+83 46
+559 828
+640 55
+765 830
+374 55
+1391 835
+35 55
+1437 837
+405 55
+1277 837
+757 65
+1113 837
+446 72
+1041 837
+647 72
+870 842
+475 75
+1468 851
+682 76
+1487 851
+705 78
+1354 854
+797 78
+850 854
+129 78
+920 854
+208 81
+1426 855
+584 82
+1350 855
+1099 82
+1036 855
+67 82
+996 855
+628 85
+1328 855
+462 85
+1336 855
+516 85
+1338 855
+716 85
+1128 855
+739 86
+1414 855
+502 89
+1162 855
+467 89
+1416 855
+212 96
+1282 855
+536 100
+1304 855
+73 100
+992 855
+78 101
+954 855
+363 101
+1404 855
+553 101
+1150 855
+411 101
+1308 855
+137 101
+1182 855
+585 101
+1202 855
+65 101
+878 855
+556 115
+1104 855
+237 117
+784 855
+1148 119
+1486 855
+840 119
+848 855
+1152 119
+1006 855
+328 119
+1296 855
+1261 119
+1406 855
+1289 119
+1190 855
+499 119
+854 855
+601 119
+1264 855
+1223 119
+1030 855
+397 121
+1428 855
+104 124
+1172 855
+712 137
+1210 855
+144 137
+1076 855
+609 137
+1146 855
+101 137
+1178 855
+689 138
+1300 855
+504 140
+1226 855
+713 140
+874 855
+19 144
+1106 855
+281 144
+1200 855
+1189 145
+1470 855
+619 150
+1298 855
+349 150
+1218 855
+561 151
+1346 855
+428 155
+1472 855
+390 155
+1102 855
+12 155
+872 855
+492 155
+1154 855
+626 155
+1362 855
+98 155
+966 855
+664 155
+1126 855
+652 155
+860 855
+46 155
+1434 855
+172 155
+1008 855
+190 155
+828 855
+378 155
+26 155
+188 155
+362 155
+132 155
+1004 155
+42 155
+102 155
+1286 155
+1220 855
+170 155
+1352 855
+532 155
+1438 855
+1216 155
+1242 855
+28 155
+974 855
+1382 155
+1070 855
+274 155
+812 855
+704 155
+1408 855
+32 155
+1422 855
+1326 155
+1130 855
+970 155
+858 855
+352 155
+1196 855
+1224 855
+1026 855
+766 855
+20 155
+894 855
+668 155
+1394 855
+444 155
+1156 855
+416 155
+1332 855
+422 155
+1474 855
+1212 155
+1064 855
+68 155
+760 855
+384 155
+1090 855
+451 155
+1116 855
+147 155
+882 855
+667 155
+806 855
+307 155
+1072 855
+623 155
+876 855
+443 155
+1388 855
+355 155
+856 855
+347 155
+1432 855
+637 155
+80 855
+77 155
+1034 855
+143 155
+1214 855
+491 155
+1458 855
+683 155
+972 855
+527 155
+780 855
+277 155
+1360 855
+123 155
+946 855
+177 155
+1334 855
+563 155
+938 855
+305 155
+1108 855
+159 155
+1322 855
+43 155
+1384 855
+301 155
+1444 855
+117 155
+940 855
+257 155
+276 855
+163 155
+1236 855
+39 155
+1194 855
+211 155
+309 155
+217 155
+1088 855
+880 855
+776 855
+778 855
+1329 855
+1393 855
+1255 855
+1097 855
+781 855
+775 855
+1467 855
+515 855
+1165 855
+787 855
+1377 855
+1217 855
+1075 855
+1297 855
+1125 855
+1383 855
+827 855
+1427 855
+1017 855
+849 855
+915 855
+1433 855
+1219 855
+229 155
+847 855
+551 155
+149 155
+1345 155
+383 155
+391 155
+287 155
+13 155
+323 155
+537 155
+365 155
+670 156
+564 156
+418 158
+659 160
+333 160
+481 162
+313 165
+316 167
+660 167
+684 167
+560 167
+387 167
+469 167
+389 167
+185 167
+479 167
+1353 855
+869 855
+987 855
+907 855
+937 855
+1187 855
+773 855
+1007 855
+1149 855
+1157 855
+1369 855
+1081 855
+935 855
+1287 855
+1321 855
+883 855
+925 855
+843 855
+1185 855
+1343 855
+1135 855
+1077 855
+1385 855
+1133 855
+965 855
+253 167
+661 168
+382 170
+201 172
+577 172
+213 173
+87 181
+666 182
+90 185
+829 855
+895 855
+1115 855
+1205 855
+1367 855
+1047 855
+1117 855
+1123 855
+1271 855
+1421 855
+1211 855
+1339 855
+1471 855
+1415 855
+1207 855
+1231 855
+981 855
+1441 855
+1139 855
+1015 855
+1265 855
+841 855
+953 855
+1357 855
+1227 855
+793 855
+1101 855
+1087 855
+1163 855
+1085 855
+975 855
+1129 855
+903 855
+1459 855
+1161 855
+1411 855
+1489 855
+891 855
+889 855
+1469 855
+1351 855
+879 855
+807 855
+1371 855
+1375 855
+1349 855
+941 855
+1389 855
+1323 855
+1281 855
+1485 855
+825 855
+811 855
+1313 855
+993 855
+871 855
+927 855
+901 855
+1423 855
+989 855
+803 855
+1105 855
+1301 855
+1402 863
+1237 872
+1276 875
+962 882
+1188 882
+1065 882
+500 887
+979 891
+1315 892
+813 892
+939 892
+1095 899
+1418 900
+805 914
+950 922
+1092 935
+1169 935
+837 935
+1244 937
+1401 941
+817 944
+1060 950
+1398 956
+1091 956
+361 956
+216 963
+1314 963
+230 963
+1302 963
+1405 963
+1397 963
+1247 963
+1184 968
+774 971
+833 974
+912 979
+474 979
+890 979
+284 979
+184 979
+643 979
+509 979
+1079 979
+225 979
+736 189
+842 980
+410 189
+227 189
+512 191
+40 191
+224 191
+202 191
+578 191
+264 191
+1374 980
+1044 980
+888 980
+1290 980
+900 980
+1028 980
+1278 980
+835 980
+771 980
+1359 980
+909 980
+1451 980
+1251 980
+873 980
+1316 981
+1361 990
+884 996
+624 996
+1078 996
+1341 996
+1080 1000
+1068 1000
+814 1000
+1124 1000
+796 1000
+1356 1000
+1318 1000
+632 1000
+1476 1000
+852 1000
+1372 1000
+1038 1000
+815 1000
+1475 1000
+995 1000
+1449 1000
+203 1000
+1307 1000
+1048 1001
+1473 1001
+899 1009
+1195 1010
+1440 1021
+34 1028
+851 1028
+934 1037
+1062 1037
+1192 1037
+600 1037
+930 1037
+904 1037
+893 1037
+799 1037
+1409 1037
+959 1037
+943 1037
+763 1037
+881 1037
+955 1037
+865 1037
+1201 1037
+1014 1041
+994 1045
+648 191
+680 191
+700 191
+21 191
+283 191
+489 191
+1477 191
+589 191
+501 191
+449 191
+393 191
+573 191
+75 191
+534 193
+688 202
+82 204
+186 209
+396 209
+210 209
+438 210
+173 213
+460 218
+72 218
+150 218
+56 218
+468 218
+547 218
+603 218
+631 218
+417 218
+99 218
+477 218
+219 218
+669 218
+495 218
+730 220
+189 227
+273 227
+140 229
+85 229
+272 238
+2 238
+321 238
+674 241
+414 241
+317 243
+368 245
+488 245
+540 245
+127 245
+103 245
+749 245
+116 248
+651 259
+360 264
+645 268
+583 269
+696 276
+79 278
+259 283
+655 283
+436 295
+299 298
+298 299
+1180 301
+373 301
+243 317
+198 323
+239 323
+725 326
+496 331
+314 332
+427 332
+911 349
+654 357
+690 357
+66 358
+554 361
+350 363
+282 363
+432 363
+244 363
+275 363
+513 363
+37 363
+693 363
+133 363
+740 377
+38 377
+22 387
+100 387
+618 387
+288 394
+209 396
+439 399
+613 399
+487 400
+401 402
+29 409
+241 415
+681 415
+158 418
+303 418
+737 420
+671 424
+96 427
+332 427
+53 427
+341 434
+570 436
+295 436
+743 436
+215 440
+580 448
+471 448
+114 453
+466 454
+192 454
+548 454
+612 454
+256 454
+498 454
+662 454
+686 454
+550 454
+354 454
+200 454
+370 454
+142 454
+62 454
+86 454
+358 454
+291 454
+755 454
+505 454
+595 454
+7 454
+193 454
+587 454
+399 454
+809 454
+337 454
+223 454
+745 454
+353 454
+497 454
+41 454
+205 454
+747 454
+726 460
+676 460
+218 460
+604 460
+187 460
+729 460
+461 460
+152 461
+634 465
+714 468
+130 469
+621 469
+167 469
+675 472
+10 477
+181 477
+1225 480
+519 480
+162 481
+106 481
+88 481
+400 487
+1478 490
+967 490
+419 490
+1335 490
+620 492
+703 492
+1229 492
+97 492
+331 496
+110 501
+178 501
+568 503
+248 505
+1109 507
+702 508
+168 508
+708 508
+44 508
+59 508
+165 508
+392 511
+1410 514
+836 514
+588 514
+70 514
+1140 514
+605 514
+121 514
+311 514
+525 514
+175 514
+709 514
+5 514
+207 514
+721 519
+1342 539
+245 540
+590 547
+896 548
+233 550
+454 559
+514 559
+574 559
+824 559
+115 559
+615 559
+562 561
+151 561
+364 564
+544 564
+388 564
+250 564
+69 564
+235 564
+8 567
+318 568
+452 568
+246 568
+404 568
+694 568
+300 568
+36 568
+861 568
+367 568
+429 568
+731 568
+381 568
+329 568
+279 568
+597 568
+1131 568
+517 568
+141 568
+503 568
+549 568
+521 568
+335 570
+194 573
+542 574
+18 579
+89 579
+448 580
+269 583
+252 585
+326 585
+220 585
+1233 585
+27 585
+255 589
+530 600
+1183 600
+616 609
+315 609
+51 612
+156 615
+280 615
+484 615
+961 615
+524 618
+380 622
+465 623
+338 640
+543 640
+166 641
+1074 642
+591 642
+445 642
+1 644
+109 644
+268 645
+191 648
+408 659
+160 659
+30 659
+738 659
+128 659
+171 659
+407 659
+262 660
+371 660
+182 666
+579 669
+424 671
+472 675
+687 675
+379 681
+415 681
+732 687
+421 687
+385 687
+138 689
+15 699
+45 699
+508 708
+95 726
+180 729
+14 729
+1250 729
+754 729
+506 729
+470 729
+124 729
+650 729
+406 729
+936 729
+16 729
+290 729
+490 729
+480 729
+644 729
+886 729
+118 729
+296 729
+566 729
+756 729
+394 729
+538 729
+642 729
+535 729
+293 729
+93 729
+453 729
+345 729
+649 729
+711 729
+735 729
+483 729
+653 729
+727 729
+1463 729
+1063 729
+297 729
+641 729
+635 729
+677 729
+113 729
+31 729
+441 729
+1051 729
+1209 729
+289 729
+125 729
+157 729
+145 729
+617 729
+1381 729
+179 729
+47 729
+493 729
+657 731
+292 735
+420 737
+758 737
+622 737
+6 737
+426 737
+555 737
+204 741
+646 741
+84 741
+64 741
+356 741
+614 741
+308 741
+17 741
+701 741
+437 741
+685 741
+973 741
+857 741
+431 741
+691 741
+105 747
+344 756
+494 756
+715 756
+403 756
+9 756
+1166 762
+1254 762
+1082 762
+885 762
+1387 762
+1061 762
+1269 762
+1153 762
+1330 765
+830 765
+990 765
+1232 765
+1122 765
+792 765
+1482 765
+1197 765
+1193 1046
+1158 1047
+798 1047
+1306 1047
+312 1047
+762 1047
+952 1047
+908 1047
+1000 1047
+1325 1047
+855 1047
+1447 1047
+249 1047
+963 1047
+1479 1047
+1215 1047
+949 1047
+1191 1047
+933 1048
+1366 1049
+1121 1049
+782 1051
+741 1051
+1337 1051
+1013 1051
+1045 1051
+1365 1051
+971 1051
+956 1052
+1417 1052
+910 1054
+1396 1054
+944 1055
+1368 1055
+1164 1055
+11 1055
+1317 1055
+1379 1055
+1155 1055
+1239 1055
+767 1055
+1429 1055
+1119 1055
+1058 1057
+945 1058
+1057 1058
+1240 1061
+779 1061
+1127 1067
+1096 1070
+33 1070
+1203 1076
+1084 1081
+1448 1081
+1222 1088
+1160 1095
+834 1101
+1310 1108
+862 1108
+507 1109
+1020 1112
+1018 1112
+1069 1112
+802 1133
+761 1134
+58 1135
+1333 1135
+1144 1150
+1208 1153
+1450 1153
+1445 1153
+1419 1153
+1171 1153
+977 1153
+1179 1153
+898 1154
+958 1154
+1293 1159
+325 1159
+1136 1177
+1435 1177
+1238 1185
+1258 1187
+1086 1187
+980 1187
+1256 1187
+913 1187
+1021 1187
+1399 1191
+1198 1192
+1046 1193
+1010 1195
+1206 1205
+892 1214
+442 1214
+1037 1214
+823 1214
+1268 1222
+1460 1222
+1442 1227
+1042 1231
+916 1231
+1052 1231
+816 1231
+679 1231
+1412 1236
+846 1245
+1270 1245
+1204 1245
+1319 1245
+1275 1246
+978 1252
+831 1255
+1260 1260
+1259 1260
+1403 1262
+1320 1264
+984 1270
+790 1270
+1481 1270
+942 1275
+875 1276
+1159 1293
+1309 1295
+764 1296
+1199 1296
+947 1306
+951 1306
+1295 1309
+786 1317
+539 1318
+800 1320
+1249 1320
+868 1321
+819 1321
+1257 1328
+804 1330
+931 1330
+960 1338
+932 1339
+1009 1351
+81 1354
+822 1357
+1001 1357
+968 1360
+1340 1360
+1413 1360
+1253 1360
+887 1360
+1279 1368
+1436 1369
+839 1374
+929 1375
+523 1375
+1186 1378
+768 1378
+922 1384
+926 1384
+964 1384
+1114 1384
+1031 1384
+1177 1384
+1395 1384
+1093 1384
+1456 1390
+1054 1396
+788 1401
+1364 1402
+1252 1402
+863 1402
+1071 1402
+1262 1403
+791 1407
+1454 1408
+1234 1408
+1029 1408
+1221 1408
+1167 1408
+1457 1408
+1103 1408
+1019 1410
+772 1411
+1246 1411
+1420 1411
+1274 1411
+1288 1411
+1053 1411
+1273 1411
+1348 1414
+1100 1425
+1430 1429
+988 1429
+826 1429
+1112 1429
+982 1429
+1055 1429
+1245 1429
+808 1432
+92 1437
+1134 1438
+1431 1438
+1067 1438
+1291 1455
+1303 1455
+1390 1456
+1170 1456
+1425 1456
+818 1459
+1373 1459
+1040 1461
+810 1461
+1484 1463
+1392 1479
+1024 1479
+1355 1479
+801 1479
+1145 1479
+1263 1479
+983 1479
+1049 1482
+921 1482
+1003 1487
+1488 1489
+22/12/23 01:49:59 INFO Executor: Finished task 1.0 in stage 24.0 (TID 23). 1275 bytes result sent to driver
+22/12/23 01:49:59 INFO Executor: Finished task 0.0 in stage 24.0 (TID 22). 1275 bytes result sent to driver
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 1.0 in stage 24.0 (TID 23) in 145 ms on clnode101.clemson.cloudlab.us (executor driver) (1/2)
+22/12/23 01:49:59 INFO TaskSetManager: Finished task 0.0 in stage 24.0 (TID 22) in 145 ms on clnode101.clemson.cloudlab.us (executor driver) (2/2)
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Removed TaskSet 24.0, whose tasks have all completed, from pool 
+22/12/23 01:49:59 INFO DAGScheduler: ResultStage 24 (foreach at lpa.scala:30) finished in 0.153 s
+22/12/23 01:49:59 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+22/12/23 01:49:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 24: Stage finished
+22/12/23 01:49:59 INFO DAGScheduler: Job 4 finished: foreach at lpa.scala:30, took 0.191093 s
+22/12/23 01:49:59 INFO SparkContext: Invoking stop() from shutdown hook
+22/12/23 01:49:59 INFO SparkUI: Stopped Spark web UI at http://clnode101.clemson.cloudlab.us:4040
+22/12/23 01:49:59 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/12/23 01:49:59 INFO MemoryStore: MemoryStore cleared
+22/12/23 01:49:59 INFO BlockManager: BlockManager stopped
+22/12/23 01:49:59 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/12/23 01:49:59 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/12/23 01:49:59 INFO SparkContext: Successfully stopped SparkContext
+22/12/23 01:49:59 INFO ShutdownHookManager: Shutdown hook called
+22/12/23 01:49:59 INFO ShutdownHookManager: Deleting directory /tmp/spark-08907f4a-66d1-46fa-9436-a9cdd194c18c
+22/12/23 01:49:59 INFO ShutdownHookManager: Deleting directory /tmp/spark-6f8e9233-e083-4d4d-82cb-ff2c74c7af3a
